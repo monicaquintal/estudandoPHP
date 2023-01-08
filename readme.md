@@ -13,6 +13,7 @@
 <a href="#aula04">Saída de dados com echo() e print()</a><br>
 <a href="#aula05">Funcionamento do PHP um pouco mais a fundo (páginas estáticas x dinâmicas)</a><br>
 <a href="#aula06">Comentários</a><br>
+<a href="#aula07">Variáveis - introdução</a><br>
 
 <hr>
 
@@ -44,12 +45,14 @@ Tem suporte a diversos BDs, e tem vasto suporte a diversos protocolos de comunic
 
 Formas de inclusão do PHP em arquivos HTML:
 
+<div align="center">
 NOME | TAG | STATUS
 :---------:|:-----------:|:-------:
 Tag padrão | &lt;?php código aqui ?&gt; | Habilitada
 Tag de impressão | &lt;?= php código aqui ?&gt; | Habilitada
 Tag curta | &lt;? código aqui ?&gt; | Desabilitada
 *Asp tag | &lt;% código aqui %&gt; | Descontinuada na versão 7
+</div>
 
 
 <hr>
@@ -86,6 +89,7 @@ Echo é um construtor de linguagem, enquanto o print inicialmente era uuma funç
 ?>
 ~~~
 
+>arquivo echo_print.php
 
 <hr>
 
@@ -103,3 +107,26 @@ Se a solicitação recebida for um arquivo PHP, então repassa a solicitação p
 <div id="aula06" align="center">
 <h2>Aula 06: Comentários</h2>
 </div>
+
+Importante para manutenção de estruturas e documentação.
+
+~~~php
+// comentário de uma linha
+
+# comentário de uma linha no estilo shell
+
+/*
+  Comentário de 
+  múltiplas linhas
+*/
+~~~
+
+>arquivo comentarios.php
+
+
+<hr>
+
+<div id="aula07" align="center">
+<h2>Aula 07: Variáveis - Introdução</h2>
+</div>
+
