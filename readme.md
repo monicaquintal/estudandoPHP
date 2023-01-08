@@ -8,7 +8,9 @@
 
 ## Introdução ao PHP
 <a href="#aula01">O que é PHP?</a><br>
-<a href="#aula02">Embutindo blocos PHP em páginas HTML</a>
+<a href="#aula02">Embutindo blocos PHP em páginas HTML</a><br>
+<a href="#aula03">Habilitando e testando tags curtas (short_open_tag)</a><br>
+<a href="#aula04">Saída de dados com echo() e print()</a><br>
 
 <hr>
 
@@ -34,7 +36,7 @@ Tem suporte a diversos BDs, e tem vasto suporte a diversos protocolos de comunic
 
 <hr>
 
-<div id="aula01" align="center">
+<div id="aula02" align="center">
 <h2>Aula 02: Embutindo blocos PHP em páginas HTML</h2>
 </div>
 
@@ -47,3 +49,21 @@ Tag de impressão | &lt;?= php código aqui ?&gt; | Habilitada
 Tag curta | &lt;? código aqui ?&gt; | Desabilitada
 *Asp tag | &lt;% código aqui %&gt; | Descontinuada na versão 7
 
+
+<hr>
+
+<div id="aula03" align="center">
+<h2>Aula 03: Habilitando e testando tags curtas (short_open_tag)</h2>
+</div>
+
+A tag curta não está mais disponível na versão 8 do PHP! Utilizar a tag padrão:
+
+~~~php
+<?php código aqui ?>
+~~~
+
+<hr>
+
+<div id="aula04" align="center">
+<h2>Aula 04: Saída de dados com echo() e print()</h2>
+</div>
