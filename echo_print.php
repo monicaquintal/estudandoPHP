@@ -5,14 +5,10 @@
   </head>
 
   <body>
-
     <?php
-    echo 'Utilizando a tag padrão!';
+    echo 'Comando echo <br>';
+    print 'Comando print<hr>';
     ?>
 
-    <br>
-
-    <?= 'Utilizando a tag impressão!'; ?>
-    
   </body>
 </html>

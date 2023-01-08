@@ -11,6 +11,7 @@
 <a href="#aula02">Embutindo blocos PHP em páginas HTML</a><br>
 <a href="#aula03">Habilitando e testando tags curtas (short_open_tag)</a><br>
 <a href="#aula04">Saída de dados com echo() e print()</a><br>
+<a href="#aula05">Funcionamento do PHP um pouco mais a fundo (páginas estáticas x dinâmicas)</a><br>
 
 <hr>
 
@@ -62,8 +63,32 @@ A tag curta não está mais disponível na versão 8 do PHP! Utilizar a tag padr
 <?php código aqui ?>
 ~~~
 
+
 <hr>
 
 <div id="aula04" align="center">
 <h2>Aula 04: Saída de dados com echo() e print()</h2>
 </div>
+
+Ambos possuem o objetivo de imprimir conteúdos advindos do bloco de código PHP dentro do arquivo HTML que é entregue ao usuário.
+
+Podemos utilizar aspas simples ou duplas.
+
+A última instrução não precisa de ";".
+
+Echo é um construtor de linguagem, enquanto o print inicialmente era uuma função.
+
+~~~php
+<?php
+  echo 'Comando echo <br>';
+  print 'Comando print<hr>';
+?>
+~~~
+
+
+<hr>
+
+<div id="aula05" align="center">
+<h2>Aula 05: Funcionamento do PHP um pouco mais a fundo (páginas estáticas x dinâmicas)</h2>
+</div>
+
