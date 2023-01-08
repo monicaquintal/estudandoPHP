@@ -46,12 +46,14 @@ Tem suporte a diversos BDs, e tem vasto suporte a diversos protocolos de comunic
 Formas de inclusão do PHP em arquivos HTML:
 
 <div align="center">
+
 NOME | TAG | STATUS
 :---------:|:-----------:|:-------:
 Tag padrão | &lt;?php código aqui ?&gt; | Habilitada
 Tag de impressão | &lt;?= php código aqui ?&gt; | Habilitada
 Tag curta | &lt;? código aqui ?&gt; | Desabilitada
 *Asp tag | &lt;% código aqui %&gt; | Descontinuada na versão 7
+
 </div>
 
 
