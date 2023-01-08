@@ -7,8 +7,7 @@
 <div align="justify">
 
 ## Introdução ao PHP
-<a href="#aula01">O que é PHP?</a>
-
+<a href="#aula01">O que é PHP?</a><br>
 <a href="#aula02">Embutindo blocos PHP em páginas HTML</a>
 
 <hr>
