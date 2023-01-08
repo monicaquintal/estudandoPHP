@@ -12,6 +12,7 @@
 <a href="#aula03">Habilitando e testando tags curtas (short_open_tag)</a><br>
 <a href="#aula04">Saída de dados com echo() e print()</a><br>
 <a href="#aula05">Funcionamento do PHP um pouco mais a fundo (páginas estáticas x dinâmicas)</a><br>
+<a href="#aula06">Comentários</a><br>
 
 <hr>
 
@@ -92,3 +93,13 @@ Echo é um construtor de linguagem, enquanto o print inicialmente era uuma funç
 <h2>Aula 05: Funcionamento do PHP um pouco mais a fundo (páginas estáticas x dinâmicas)</h2>
 </div>
 
+Páginas estáticas são arquivos HTML com codificação hardcode, sem tratativas no arquivo, enquanto páginas web dinâmicas são páginas produzidas no intervalo entre a requisição e a resposta que é recebida e devolvida pelo servidor HTTP (nesse caso, o Apache).
+
+Se a solicitação recebida for um arquivo PHP, então repassa a solicitação para o interpretador do PHP. Isso faz com que abra o script solicitado, interprete e devolva o retorno (uma página HTML) ao Apache.
+
+
+<hr>
+
+<div id="aula06" align="center">
+<h2>Aula 06: Comentários</h2>
+</div>
