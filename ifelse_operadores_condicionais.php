@@ -22,6 +22,13 @@
       echo 'Falso';
     }
 
+    echo '<br>';
+
+    if (6 >= 6)
+      echo 'Exemplo de omissão das chaves';
+      echo 'Funciona apenas para uma instrução!';
+    echo 'Preferir sempre abrir e fechar as chaves';
+    
     ?>
    
   </body>

@@ -320,6 +320,8 @@ Maior igual | &gt;= | Verifica se o valor da esquerda é maior ou igual ao da di
 
 Aplicação dos operadores de comparação apresentados na aula anterior.
 
+Podemos omitir as chaves, caso o if possua apenas uma instrução. Entretanto, recomenda-se sempre abrir e fechar as chaves (para definir o bloco de código explicitamente).
+
 
 <hr>
 
