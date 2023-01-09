@@ -14,7 +14,10 @@
 <a href="#aula05">Aula 05: Funcionamento do PHP um pouco mais a fundo (páginas estáticas x dinâmicas)</a><br>
 <a href="#aula06">Aula 06: Comentários</a><br>
 <a href="#aula07">Aula 07: Variáveis - introdução</a><br>
-<a href="#aula08">Aula 08: Variáveis - Prática</a><br>
+<a href="#aula08">Aula 08: Variáveis - prática</a><br>
+<a href="#aula09">Aula 09: Alterando valores de variáveis</a><br>
+
+
 <hr>
 
 <div id="aula01" align="center">
@@ -149,4 +152,33 @@ Exemplos: $nome, $fone1, $endereco_2
 
 <div id="aula08" align="center">
 <h2>Aula 08: Variáveis - Prática (string, int, float e boolean).</h2>
+</div>
+
+>arquivo variaveis.php
+
+~~~php
+<body>
+<?php
+// string
+$nome = "Mônica :)";
+// int
+$idade = 31;
+// float
+$altura = 1.59;
+//boolean
+$fumante = false; // true = 1 e false = vazio (nada é retornado)
+?>
+  
+<h1>Ficha cadastral</h1>
+<p>Nome: <?= $nome ?></p>
+<p>Idade: <?= $idade ?></p>
+<p>Altura: <?= $altura ?></p>
+<p>Fumante? <?= $fumante ?></p>
+~~~
+
+
+<hr>
+
+<div id="aula09" align="center">
+<h2>Aula 09: Alterando valores de variáveis.</h2>
 </div>
