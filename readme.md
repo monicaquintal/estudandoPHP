@@ -17,6 +17,8 @@
 <a href="#aula08">Aula 08: Variáveis - prática</a><br>
 <a href="#aula09">Aula 09: Alterando valores de variáveis</a><br>
 <a href="#aula10">Aula 10: Concatenação</a><br>
+<a href="#aula11">Aula 11: Variáveis constantes</a><br>
+
 
 
 <hr>
@@ -193,4 +195,34 @@ Em qualquer momento da lógica do script poderemos alterar os valores das variá
 
 <div id="aula10" align="center">
 <h2>Aula 10: Concatenação.</h2>
+</div>
+
+>arquivo concatenacao.php
+
+A concatenação é realizada a partir do operador "**.**"!
+
+Também podemos utilizar aspas duplas para fazer a concatenação de cadeias de caracteres com valores de variáveis.
+(não se aplica a aspas simples!!!)
+
+Como aspas simples não dão margem pra concatenação em seu interior (apenas com .), são mais rápidas que as duplas (que sempre serão verificadas)!
+
+~~~php
+$nome = "Mônica";
+$idade = 31;
+$cor = "rosa";
+
+// para concatenação, usar o operador "."
+echo "Olá, meu nome é " . $nome . "! Tenho " . $idade . " anos e minha cor favorita é " . $cor . ". :)";
+
+echo "<br>";
+
+// utilização de aspas duplas para concatenação
+echo "Olá, $nome! Tudo bem?" 
+~~~
+
+
+<hr>
+
+<div id="aula11'" align="center">
+<h2>Aula 11: Variáveis constantes.</h2>
 </div>
