@@ -318,3 +318,11 @@ Maior igual | &gt;= | Verifica se o valor da esquerda é maior ou igual ao da di
 
 > arquivo ifelse_operadores_condicionais.php
 
+Aplicação dos operadores de comparação apresentados na aula anterior.
+
+
+<hr>
+
+<div id="aula15" align="center">
+<h2>Aula 15: Operadores lógicos.</h2>
+</div>  

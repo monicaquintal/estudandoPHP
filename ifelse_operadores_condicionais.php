@@ -7,7 +7,12 @@
   <body>
     <?php
 
-    if (true) {
+    // ==
+    // ===
+    // != ou <>
+    // !==
+
+    if (1 !== "1") {
       echo 'Verdadeiro';
     } else {
       echo 'Falso';
