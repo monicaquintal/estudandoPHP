@@ -7,14 +7,14 @@
 <div align="justify">
 
 ## Introdução ao PHP
-<a href="#aula01">O que é PHP?</a><br>
-<a href="#aula02">Embutindo blocos PHP em páginas HTML</a><br>
-<a href="#aula03">Habilitando e testando tags curtas (short_open_tag)</a><br>
-<a href="#aula04">Saída de dados com echo() e print()</a><br>
-<a href="#aula05">Funcionamento do PHP um pouco mais a fundo (páginas estáticas x dinâmicas)</a><br>
-<a href="#aula06">Comentários</a><br>
-<a href="#aula07">Variáveis - introdução</a><br>
-
+<a href="#aula01">Aula 01: O que é PHP?</a><br>
+<a href="#aula02">Aula 02: Embutindo blocos PHP em páginas HTML</a><br>
+<a href="#aula03">Aula 03: Habilitando e testando tags curtas (short_open_tag)</a><br>
+<a href="#aula04">Aula 04: Saída de dados com echo() e print()</a><br>
+<a href="#aula05">Aula 05: Funcionamento do PHP um pouco mais a fundo (páginas estáticas x dinâmicas)</a><br>
+<a href="#aula06">Aula 06: Comentários</a><br>
+<a href="#aula07">Aula 07: Variáveis - introdução</a><br>
+<a href="#aula08">Aula 08: Variáveis - Prática</a><br>
 <hr>
 
 <div id="aula01" align="center">
@@ -132,3 +132,21 @@ Importante para manutenção de estruturas e documentação.
 <h2>Aula 07: Variáveis - Introdução</h2>
 </div>
 
+**Variáveis** são utilizadas para armazenamento de dados. Em PHP, há tipos específicos de variáveis (que definem o tipo de dado que está presente na variável): string, int, float, boolean, array, ...
+
+Regras para declaração de variáveis em PHP:
+- deve obigatoriamente iniciar com o caractere **$**.
+- não pode conter espaços ou caracteres especiais (com exceção do underline).
+
+Não requer (ou suporte) a definição explícita de tipo. O PHP tem a inteligência para identificar o tipo de variável no momento da atribuição do valor (a tipagem é dinâmica).
+
+Case sensitive!!!
+
+Exemplos: $nome, $fone1, $endereco_2
+
+
+<hr>
+
+<div id="aula08" align="center">
+<h2>Aula 08: Variáveis - Prática (string, int, float e boolean).</h2>
+</div>
