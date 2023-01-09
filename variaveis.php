@@ -11,7 +11,7 @@
     $nome = "Mônica :)";
 
     // int
-    $idade = 31;
+    $idade = 30;
 
 
     // float
@@ -19,6 +19,9 @@
 
     //boolean
     $fumante = false; // true = 1 e false = vazio (nada é retornado) -> permite tomadas de decisões
+
+    // ... lógica ... //
+    $idade = 31;
 
     ?>
     

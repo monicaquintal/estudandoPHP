@@ -16,6 +16,7 @@
 <a href="#aula07">Aula 07: Variáveis - introdução</a><br>
 <a href="#aula08">Aula 08: Variáveis - prática</a><br>
 <a href="#aula09">Aula 09: Alterando valores de variáveis</a><br>
+<a href="#aula10">Aula 10: Concatenação</a><br>
 
 
 <hr>
@@ -181,4 +182,15 @@ $fumante = false; // true = 1 e false = vazio (nada é retornado)
 
 <div id="aula09" align="center">
 <h2>Aula 09: Alterando valores de variáveis.</h2>
+</div>
+
+>arquivo variaveis.php
+
+Em qualquer momento da lógica do script poderemos alterar os valores das variáveis. A alteração também pode ocorrer a nível de tipo (característico de linguagens de tipagem fraca).
+
+
+<hr>
+
+<div id="aula10" align="center">
+<h2>Aula 10: Concatenação.</h2>
 </div>
