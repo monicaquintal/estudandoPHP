@@ -264,7 +264,6 @@ echo BD_SENHA;
 </div>  
 
 É uma estrutura de controle, que permite definir o fluxo que a aplicação tomará, a partir de uma determinada condição.
-
 A instrução else é opcional.
 
 Sintaxe:
@@ -316,3 +315,6 @@ Maior igual | &gt;= | Verifica se o valor da esquerda é maior ou igual ao da di
 <div id="aula14" align="center">
 <h2>Aula 14: If/else parte 2: Praticando com operadores de comparação.</h2>
 </div>  
+
+> arquivo ifelse_operadores_condicionais.php
+
