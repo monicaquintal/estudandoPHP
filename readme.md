@@ -231,7 +231,7 @@ echo "Olá, $nome! Tudo bem?"
 
 <hr>
 
-<div id="aula11'" align="center">
+<div id="aula11" align="center">
 <h2>Aula 11: Variáveis constantes.</h2>
 </div>  
 
@@ -292,4 +292,27 @@ if (condição) {
 
 <div id="aula13" align="center">
 <h2>Aula 13: Operadores de comparação (condicionais).</h2>
+</div>  
+
+Também conhecidos como operadores relacionais, são capazes de formar as expressões condicionais, que serão colocadas dentro dos comandos if.
+
+São eles (9):
+
+OPERADOR | REPRESENTAÇÃO | SIGNIFICADO
+---------|:---------------:|--------------
+Igual | == | Verifica se os valores comparados são iguais
+Idêntico | === | Verifica se os valores comparados são iguais e do mesmo tipo
+Diferente | != | Verifica se os valores comparados são diferentes
+Diferente | &lt;&gt; | Verifica se os valores comparados são diferentes
+Não idêntico | !== | Verifica se os valores comparados são diferentes e de tipos diferentes
+Menor | &lt; | Verifica se o valor da esquerda é menor que o da direita
+Maior | &gt; | Verifica se o valor da esquerda é maior que o da direita
+Menor igual | &lt;= | Verifica se o valor da esquerda é menor ou igual ao da direita
+Maior igual | &gt;= | Verifica se o valor da esquerda é maior ou igual ao da direita
+
+
+<hr>
+
+<div id="aula14" align="center">
+<h2>Aula 14: If/else parte 2: Praticando com operadores de comparação.</h2>
 </div>  
