@@ -18,7 +18,15 @@
 <a href="#aula09">Aula 09: Alterando valores de variáveis</a><br>
 <a href="#aula10">Aula 10: Concatenação</a><br>
 <a href="#aula11">Aula 11: Variáveis constantes</a><br>
-
+<a href="#aula12">Aula 12: If/else parte 1 - Introdução</a><br>
+<a href="#aula13">Aula 13: Operadores de comparação (condicionais)</a><br>
+<a href="#aula14">Aula 14: If/else parte 2 - Praticando com operadores de comparação</a><br>
+<a href="#aula15">Aula 15: Operadores lógicos</a><br>
+<a href="#aula16">Aula 16: If/else parte 3 - Praticando com operadores lógicos</a><br>
+<a href="#aula17">Aula 17: If/else parte 4 - Praticando um pouco mais</a><br>
+<a href="#aula18">Aula 18: If/else parte 5 - Condições encadeadas</a><br>
+<a href="#aula19">Aula 19: Operador ternário</a><br>
+<a href="#aula20">Aula 20: Atividades para fixação do conteúdo</a><br>
 
 
 <hr>
@@ -225,4 +233,63 @@ echo "Olá, $nome! Tudo bem?"
 
 <div id="aula11'" align="center">
 <h2>Aula 11: Variáveis constantes.</h2>
-</div>
+</div>  
+
+São variáveis cujos valores não podem ser modificados (não podem ser sobrepostos). Geralmente são utilizadas para parametrização de informações de ambiente da aplicação (ambiente de desenvolvimento). Dão uma maior segurança ao código (quando migramos ao ambiente de produção, por exemplo).
+
+>arquivo variaveis_constantes.php
+
+Para criação de variáveis constantes, utilizar a função **define()**, que tem dois parâmetros: 
+- nome da variável (em formato de string);
+- e valor!
+
+Sempre utilizar *caracteres maiúsculos* (boas práticas)!
+Não é necessário utilizar $.
+
+~~~php
+define('BD_URL', 'endereco_bd_dev');
+define('BD_USUARIO', 'usuario_dev');
+define('BD_SENHA', 'senha_dev');
+
+echo BD_URL . '<br>';
+echo BD_USUARIO . '<br>';
+echo BD_SENHA;
+~~~
+
+
+<hr>
+
+<div id="aula12" align="center">
+<h2>Aula 12: If/else parte 1 - Introdução.</h2>
+</div>  
+
+É uma estrutura de controle, que permite definir o fluxo que a aplicação tomará, a partir de uma determinada condição.
+
+A instrução else é opcional.
+
+Sintaxe:
+~~~
+if (condição) {
+  // trecho de código que será executado
+} else {
+  // trecho de código que será executado
+}
+~~~
+
+Encadeado:
+~~~
+if (condição) {
+  // trecho de código que será executado
+} else if (condicão) {
+  // trecho de código que será executado
+} else {
+  // trecho de código que será executado
+}
+~~~
+
+
+<hr>
+
+<div id="aula13" align="center">
+<h2>Aula 13: Operadores de comparação (condicionais).</h2>
+</div>  
