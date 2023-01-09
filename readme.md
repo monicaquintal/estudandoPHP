@@ -328,3 +328,19 @@ Podemos omitir as chaves, caso o if possua apenas uma instrução. Entretanto, r
 <div id="aula15" align="center">
 <h2>Aula 15: Operadores lógicos.</h2>
 </div>  
+
+Operadores lógicos permitem conectar operações de comparação, a fim de criar condições mais exigentes.
+
+OPERADOR | REPRESENTAÇÃO | SIGNIFICADO
+:---------:|:---------------:|--------------
+E | AND ou && | V se todas as expressões forem V
+OU | OR ou &#124;&#124; | V se pelo menos uma das expressões for V
+Xor | XOR | V apenas se uma das expressões for V, mas não ambas
+Negação | ! | Inverte o resultado da expressão
+
+
+<hr>
+
+<div id="aula16" align="center">
+<h2>Aula 16: If/else parte 3 - Praticando com operadores lógicos.</h2>
+</div>  
