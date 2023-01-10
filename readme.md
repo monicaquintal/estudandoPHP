@@ -355,5 +355,18 @@ Os parênteses permitem estabelecer precedência (o interpretador lerá primeiro
 <hr>
 
 <div id="aula17" align="center">
-<h2>Aula 17: .</h2>
+<h2>Aula 17: If/else parte 4 - Praticando um pouco mais.</h2>
+</div>
+
+> arquivo ifelse_praticando_mais_um_pouco.php
+
+Exemplo de uma situação em um e-commerce, onde: é dado frete gratuito se o usuário possuir o cartão da loja E se o valor da compra for maior que 100 reais.
+
+Obs: se for testar variável do tipo booleana dentro de um operador lógico, não precisamos compararcom "==", apenas indicar a variável.
+
+
+<hr>
+
+<div id="aula18" align="center">
+<h2>Aula 18: If/else parte 5 - Condições encadeadas.</h2>
 </div>
