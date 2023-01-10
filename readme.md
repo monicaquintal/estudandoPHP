@@ -343,4 +343,17 @@ Negação | ! | Inverte o resultado da expressão
 
 <div id="aula16" align="center">
 <h2>Aula 16: If/else parte 3 - Praticando com operadores lógicos.</h2>
-</div>  
+</div>
+
+> arquivo ifelse_operadores_logicos.php
+
+Operadores lógicos podem conectar de 2 a n operações de comparação!
+
+Os parênteses permitem estabelecer precedência (o interpretador lerá primeiro o que está nos parênteses, e inicialmente os mais internos).
+
+
+<hr>
+
+<div id="aula17" align="center">
+<h2>Aula 17: .</h2>
+</div>
