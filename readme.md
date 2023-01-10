@@ -351,6 +351,44 @@ Operadores lógicos podem conectar de 2 a n operações de comparação!
 
 Os parênteses permitem estabelecer precedência (o interpretador lerá primeiro o que está nos parênteses, e inicialmente os mais internos).
 
+~~~php
+// E - && (retorna V se todos os resultados forem V)
+
+if(5 == 3 && 10 > 3) {
+  echo 'Verdadeiro';
+} else {
+  echo 'Falso';
+}
+~~~
+
+~~~php
+// OU - || (retorna V se pelo menos um dos resultados for V)
+
+if(5 == 5 || 10 < 3) {
+  echo 'Verdadeiro';
+} else {
+  echo 'Falso';
+}
+~~~
+
+~~~php
+// XOR - XOR (V se uma das expressões for V e a outra F, ou vice-versa).
+if(5 == 5 XOR 10 > 3) {
+  echo 'Verdadeiro';
+} else {
+  echo 'Falso';
+}
+~~~
+
+~~~php
+// negação - ! (inverte o resultado da expressão)
+if(!('a' == 'b')) {
+  echo 'Verdadeiro';
+} else {
+  echo 'Falso';
+}
+~~~
+
 
 <hr>
 
@@ -364,9 +402,108 @@ Exemplo de uma situação em um e-commerce, onde: é dado frete gratuito se o us
 
 Obs: se for testar variável do tipo booleana dentro de um operador lógico, não precisamos compararcom "==", apenas indicar a variável.
 
+~~~php
+<?php
+$usuario_possui_cartao_loja = true;
+$valor_compra = 99;
+
+$valor_frete = 50;
+$recebeu_desconto_frete = false;
+
+if ($usuario_possui_cartao_loja && $valor_compra >= 100) {
+  $valor_frete = 0;
+  $recebeu_desconto_frete = true;
+}
+?>
+
+<h1>Detalhes do pedido</h1>
+<p>Possui cartão da loja?
+
+<?php
+  if ($usuario_possui_cartao_loja == true) {
+    echo 'SIM';
+  } else {
+    echo 'NÃO';
+  }
+  ?>
+</p>
+
+<p>Valor da compra: <?= $valor_compra?></p>
+
+<p>Recebeu desconto no frete?
+
+<?php
+  if ($recebeu_desconto_frete) {
+    echo 'SIM';
+  } else {
+    echo 'NÃO';
+  }
+?>
+</p>
+
+<p>Valor do frete: <?= $valor_frete?></p>
+~~~
 
 <hr>
 
 <div id="aula18" align="center">
 <h2>Aula 18: If/else parte 5 - Condições encadeadas.</h2>
+</div>
+
+> arquivo ifelse_praticando_mais_um_pouco.php
+
+~~~php
+<?php
+  $usuario_possui_cartao_loja = true;
+  $valor_compra = 250;
+
+  $valor_frete = 50;
+  $recebeu_desconto_frete = true;
+
+  if ($usuario_possui_cartao_loja  && $valor_compra >= 400) {
+      $valor_frete = 0;
+
+  } else if ($usuario_possui_cartao_loja  && $valor_compra >= 300) {
+      $valor_frete = 10;
+
+  } else if ($usuario_possui_cartao_loja  && $valor_compra >= 100) {
+      $valor_frete = 25;
+
+  } else {
+      //...
+      $recebeu_desconto_frete = false;
+  }
+?>
+
+<h1>Detalhes do pedido</h1>
+<p>Possui cartão da loja?
+    <?php
+      if ($usuario_possui_cartao_loja) {
+          echo 'SIM';
+      } else {
+          echo 'NÃO';
+      }
+    ?>
+</p>
+
+<p>Valor da compra: <?= $valor_compra ?></p>
+
+<p>Recebeu desconto no frete?
+    <?php
+      if  ($recebeu_desconto_frete) {
+        echo 'SIM';
+      } else {
+        echo 'NÃO';
+      }
+    ?>
+</p>
+
+<p>Valor do frete: <?= $valor_frete ?></p>
+~~~
+
+
+<hr>
+
+<div id="aula19" align="center">
+<h2>Aula 19: Operador ternário.</h2>
 </div>
