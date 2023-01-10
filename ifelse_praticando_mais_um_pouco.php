@@ -51,6 +51,5 @@
 
   <p>Valor do frete: <?= $valor_frete?></p>
 
-
   </body>
 </html>
