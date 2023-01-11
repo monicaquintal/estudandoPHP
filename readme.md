@@ -507,3 +507,36 @@ if ($usuario_possui_cartao_loja && $valor_compra >= 100) {
 <div id="aula19" align="center">
 <h2>Aula 19: Operador ternário.</h2>
 </div>
+
+Permite, com base em determinada condição, seguir ou não um fluxo. É mais limitado, pois retorna apenas uma instrução quando V ou F. Entretanto, são menos verbosos.
+
+Sintaxe:
+~~~
+// <condição> ? true : false
+~~~
+
+Exemplo (aplicando com base no exercício da aula anterior):
+
+~~~php
+<h1>Detalhes do pedido</h1>
+<p>Possui cartão da loja? <?= $usuario_possui_cartao_loja ? 'SIM' : 'NÃO'; ?></p>
+    // ou $usuario_possui_cartao_loja == true ?  'SIM' : 'NÃO';
+
+<p>Valor da compra: <?= $valor_compra ?></p>
+
+<p>Recebeu desconto no frete?
+    <?php
+      $teste = $recebeu_desconto_frete ? 'SIM' : 'NÃO';
+      echo $teste; 
+    ?>
+</p>
+~~~
+
+Apesar de não ser uma prática recomendada, há a possibilidade de utilizar operadores ternários encadeados (com parênteses).
+
+
+<hr>
+
+<div id="aula20" align="center">
+<h2>Aula 20: Atividades para fixação do conteúdo.</h2>
+</div>
