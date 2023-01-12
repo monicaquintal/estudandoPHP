@@ -613,6 +613,29 @@ A comparação é por **igualdade**, e não por identidade (diferente do JS)!!! 
 
 Nos cases, podemos utilizar valores que não são numéricos (como strings) - há flexibilidade no PHP.
 
+~~~php
+$parametro = 'Mônica';
+
+switch ($parametro) {
+
+case 1:
+  echo 'Entrou no case 1';
+  break;
+
+case 2:
+  echo 'Entrou no case 2';
+  break;
+    
+case 3:
+  echo 'Entrou no case 3';
+  break;
+
+default:
+  echo 'Entrou no default!';
+  break;
+  }
+~~~
+
 OBS: quando o valor booleano é true, o PHP retorna o resultado "1".
 
 
