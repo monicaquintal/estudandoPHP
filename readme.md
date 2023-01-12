@@ -27,6 +27,17 @@
 <a href="#aula18">Aula 18: If/else parte 5 - Condições encadeadas</a><br>
 <a href="#aula19">Aula 19: Operador ternário</a><br>
 <a href="#aula20">Aula 20: Atividades para fixação do conteúdo</a><br>
+<a href="#aula21">Aula 21: Switch</a><br>
+<a href="#aula22">Aula 22: Switch na prática</a><br>
+<a href="#aula23">Aula 23: Casting de tipos com (int), (bool), (float) e (string)</a><br>
+<a href="#aula24">Aula 24: Operadores aritméticos</a><br>
+<a href="#aula25">Aula 25: Praticando com operadores aritméticos</a><br>
+<a href="#aula26">Aula 26: Operações aritméticas na atribuição de valores</a><br>
+<a href="#aula27">Aula 27: Operadores de incremento/decremento</a><br>
+<a href="#aula28">Aula 28: Praticando com operadores de incremento/decremento</a><br>
+<a href="#aula29">Aula 29: Funções - Introdução</a><br>
+<a href="#aula30">Aula 30: Funções - Prática</a><br>
+<a href="#aula31">Aula 31: Atividades para fixação do conteúdo</a><br>
 
 
 <hr>
@@ -562,5 +573,37 @@ if ($peso >= 50 && ($idade >= 16 && $idade <= 69)) {
 <hr>
 
 <div id="aula21" align="center">
-<h2>Aula 21: .</h2>
+<h2>Aula 21: Switch.</h2>
 </div>
+
+É um condicional; visa, com base em determinada condição, seguir determinado fluxo dentro da aplicação.
+
+É mais restrito, pois permite apenas comparar idênticos. Bom em caso de organização de um meno, por exemplo.
+
+Exemplo:
+
+~~~php
+$opcao = 2
+
+switch (opcao) {
+  case 1:
+    // trecho de código que será executado
+    break;
+
+  case 2:
+    // trecho de código que será executado
+    break;
+
+  default:
+    // trecho de código que será executado
+    break;
+}
+~~~
+
+
+<hr>
+
+<div id="aula22" align="center">
+<h2>Aula 22: Switch na prática.</h2>
+</div>
+
