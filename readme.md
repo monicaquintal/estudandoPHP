@@ -585,7 +585,7 @@ Exemplo:
 ~~~php
 $opcao = 2
 
-switch (opcao) {
+switch ($opcao) {
   case 1:
     // trecho de código que será executado
     break;
@@ -607,3 +607,17 @@ switch (opcao) {
 <h2>Aula 22: Switch na prática.</h2>
 </div>
 
+> arquivo switch.php
+
+A comparação é por **igualdade**, e não por identidade (diferente do JS)!!! Faz um casting de tipos, podendo comparar o int 2 com string '2', por exemplo.
+
+Nos cases, podemos utilizar valores que não são numéricos (como strings) - há flexibilidade no PHP.
+
+OBS: quando o valor booleano é true, o PHP retorna o resultado "1".
+
+
+<hr>
+
+<div id="aula23" align="center">
+<h2>Aula 23: Casting de tipos com (int), (bool), (float) e (string).</h2>
+</div>
