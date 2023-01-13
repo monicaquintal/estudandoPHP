@@ -667,5 +667,22 @@ O tipo "real" não é mais suportado no PHO; utilizar double ou float.
 <hr>
 
 <div id="aula24" align="center">
-<h2>Aula 24: Aula 24: Operadores aritméticos.</h2>
+<h2>Aula 24: Operadores aritméticos.</h2>
+</div>
+
+Operadores matemáticos que permitem efetuar cálculos.
+
+OPERADOR | REPRESENTAÇÃO | FUNÇÃO 
+:---------:|:---------------:|--------------
+Adição | + | Soma valores
+Subtração | - | Diferença entre valores
+Multiplicação | * | Produto dos valores
+Divisão | / | Quociente dos valores
+Módulo | % | Resto existente em uma operação de divisão
+
+
+<hr>
+
+<div id="aula25" align="center">
+<h2>Aula 25: Praticando com operadores aritméticos.</h2>
 </div>
