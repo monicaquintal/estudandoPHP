@@ -749,3 +749,17 @@ Podemos combinar o operador aritmético com a atribuição: primeiro vem o opera
 <div id="aula27" align="center">
 <h2>Aula 27: Operadores de incremento/decremento.</h2>
 </div>
+
+OPERADOR | REPRESENTAÇÃO | FUNÇÃO 
+:---------:|:---------------:|--------------
+Pré-incremento | ++$a | Add uma unidade antes de retornar $a
+Pós-incremento | $a++ | Retorna $a e depois adiciona uma unidade
+Pré-decremento| --$a | Diminui uma unidade antes de retornar $a
+Pós-decremento | $a-- | Retorna $a e depois diminui uma unidade
+
+
+<hr>
+
+<div id="aula28" align="center">
+<h2>Aula 28: Praticando com operadores de incremento/decremento.</h2>
+</div>
