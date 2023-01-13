@@ -738,3 +738,14 @@ echo "O módulo entre $num1 e $num2 é " . ($num1 % $num2) . '!';
 <div id="aula26" align="center">
 <h2>Aula 26: Operações aritméticas na atribuição de valores.</h2>
 </div>
+
+> arquivo operadores_atribuicao_aritmeticos.php
+
+Podemos combinar o operador aritmético com a atribuição: primeiro vem o operador (à esquerda), em seguida a atribuição (+=, por exemplo). Isso deixa a sintaxe mais enxuta!
+
+
+<hr>
+
+<div id="aula27" align="center">
+<h2>Aula 27: Operadores de incremento/decremento.</h2>
+</div>
