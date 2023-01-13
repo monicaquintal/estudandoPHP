@@ -552,6 +552,8 @@ Apesar de não ser uma prática recomendada, há a possibilidade de utilizar ope
 <h2>Aula 20: Atividades para fixação do conteúdo.</h2>
 </div>
 
+> arquivo atividade_fixacao_1.php
+
 Enunciado:
 "Crie uma aplicação capaz de identificar se uma determinada pessoa pode ou não doar sangue. Utilize as variáveis $idade e $peso no processo. Neste primeiro momento, faca a atribuição de valores às variáveis de forma estática, ou seja, no processo de atribuição.
 
@@ -643,4 +645,27 @@ OBS: quando o valor booleano é true, o PHP retorna o resultado "1".
 
 <div id="aula23" align="center">
 <h2>Aula 23: Casting de tipos com (int), (bool), (float) e (string).</h2>
+</div>
+
+Casting de tipos consiste na conversão de uma determinada variável de um tipo para outro.
+
+A variável pode ter seu tipo modificado ou no processo de atribuição ou no contexto em que está sendo interpretada pelo PHP.
+
+> arquivo casting_tipos.php
+
+A função fettype() espera um parâmetro e retorna o seu tipo. É importante para debug.
+
+Para realizar o casting:
+
+~~~
+$variável_que_queremos_converter = (tipo de variável esperada) $nova_variavel
+~~~
+
+O tipo "real" não é mais suportado no PHO; utilizar double ou float.
+
+
+<hr>
+
+<div id="aula24" align="center">
+<h2>Aula 24: Aula 24: Operadores aritméticos.</h2>
 </div>
