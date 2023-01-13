@@ -661,7 +661,25 @@ Para realizar o casting:
 $variável_que_queremos_converter = (tipo de variável esperada) $nova_variavel
 ~~~
 
-O tipo "real" não é mais suportado no PHO; utilizar double ou float.
+O tipo "real" não é mais suportado no PHP; utilizar double ou float.
+
+~~~php
+//gettype() - retorna o tipo de uma variável
+$valor = 10;
+echo $valor . ', ' . gettype($valor);
+
+echo '<br>';
+
+// para converter de int para float
+$valor2 = (float)$valor;
+echo $valor2 . ', ' . gettype($valor2);
+
+echo '<br>';
+
+// para converter para string
+$valor3 = (string)$valor;
+echo $valor3 . ', ' . gettype($valor3);
+~~~
 
 
 <hr>
@@ -685,4 +703,38 @@ Módulo | % | Resto existente em uma operação de divisão
 
 <div id="aula25" align="center">
 <h2>Aula 25: Praticando com operadores aritméticos.</h2>
+</div>
+
+> arquivo operadores_aritmeticos.php
+
+~~~php
+
+$num1 = 12;
+$num2 = 6;
+
+// adição
+echo "A soma entre $num1 e $num2 é " . ($num1 + $num2) . '!';
+echo '<br>';
+
+// subtração
+echo "A subtração entre $num1 e $num2 é " . ($num1 - $num2) . '!';
+echo '<br>';
+
+// divisão
+echo "A divisão entre $num1 e $num2 é " . ($num1 / $num2) . '!';
+echo '<br>';
+
+// muntiplicação
+echo "A multiplicação entre $num1 e $num2 é " . ($num1 * $num2) . '!';
+echo '<br>';
+
+// módulo
+echo "O módulo entre $num1 e $num2 é " . ($num1 % $num2) . '!';
+~~~
+
+
+<hr>
+
+<div id="aula26" align="center">
+<h2>Aula 26: Operações aritméticas na atribuição de valores.</h2>
 </div>

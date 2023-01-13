@@ -36,6 +36,7 @@
     <a href="./atividade_fixacao_1.php">Atividade 1</a><br>
     <a href="./switch.php">Switch case</a><br>
     <a href="./casting_tipos.php">Casting de tipos</a><br>
+    <a href="./operadores_aritmeticos.php">Operadores aritméticos.</a><br>
 </section>
 
 </main>
