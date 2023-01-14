@@ -38,6 +38,7 @@
     <a href="./casting_tipos.php">Casting de tipos</a><br>
     <a href="./operadores_aritmeticos.php">Operadores aritméticos</a><br>
     <a href="./operadores_atribuicao_aritmeticos.php">Operações aritméticas na atribuição de valores</a><br>
+    <a href="./operadores_incremento_decremento.php">Operadores de incremento e decremento.</a><br>
 </section>
 
 </main>

@@ -653,7 +653,7 @@ A variável pode ter seu tipo modificado ou no processo de atribuição ou no co
 
 > arquivo casting_tipos.php
 
-A função fettype() espera um parâmetro e retorna o seu tipo. É importante para debug.
+A função gettype() espera um parâmetro e retorna o seu tipo. É importante para debug.
 
 Para realizar o casting:
 
@@ -763,3 +763,48 @@ Pós-decremento | $a-- | Retorna $a e depois diminui uma unidade
 <div id="aula28" align="center">
 <h2>Aula 28: Praticando com operadores de incremento/decremento.</h2>
 </div>
+
+> arquivo operadores_incremento_decremento.php
+
+~~~php
+<h3>Pós-incremento</h3>
+<?php
+$a = 7;
+echo "O valor contido em a é $a <br>";
+echo 'O valor contido em a após o incremento (a++) ' . $a++ . ' <br>';
+echo "O atualizado é  $a <br>";
+?>
+
+<h3>Pré-incremento</h3>
+<?php
+$a = 7;
+echo "O valor contido em a é $a <br>";
+echo 'O valor contido em a pré incremento (++a) ' . ++$a . ' <br>';
+echo "O atualizado é  $a <br>";
+?>
+
+<h3>Pós-decremento</h3>
+<?php
+$a = 7;
+echo "O valor contido em a é $a <br>";
+echo 'O valor contido em a após o decremento (a--) ' . $a-- . ' <br>';
+echo "O atualizado é  $a <br>";
+?>
+
+<h3>Pré-decremento</h3>
+<?php
+$a = 7;
+echo "O valor contido em a é $a <br>";
+echo 'O valor contido em a pré decremento (--a) ' . --$a . ' <br>';
+echo "O atualizado é  $a <br>";
+?>
+~~~
+
+
+
+<hr>
+
+<div id="aula29" align="center">
+<h2>Aula 29: Funções - Introdução.</h2>
+</div>
+
