@@ -801,10 +801,34 @@ echo "O atualizado é  $a <br>";
 ~~~
 
 
-
 <hr>
 
 <div id="aula29" align="center">
 <h2>Aula 29: Funções - Introdução.</h2>
 </div>
 
+As funções permitem estabelecer subprogramas com objetivos específicos, que podem ser chamados sempre que necessários dentro da lógica, evitando redundâncias no código!
+
+Tem a função de encapsular um bloco de códigos com um objetivo definido.
+
+As funções podem ser do tipo void ou com retorno!
+
+Exemplos:
+
+~~~php
+function exibirBoasVindas () {
+  echo "Bem-vindo ao Curso de PHP";
+}
+
+function calcularAreaTerreno ($largura, $comprimento) {
+  $area = $largura * $comprimento;
+  return $area;
+}
+~~~
+
+
+<hr>
+
+<div id="aula30" align="center">
+<h2>Aula 30: Funções - Prática.</h2>
+</div>
