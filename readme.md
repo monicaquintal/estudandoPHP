@@ -832,3 +832,14 @@ function calcularAreaTerreno ($largura, $comprimento) {
 <div id="aula30" align="center">
 <h2>Aula 30: Funções - Prática.</h2>
 </div>
+
+> arquivo funcoes.php
+(aplicação dos exemplos da aula anterior)
+
+
+<hr>
+
+<div id="aula31" align="center">
+<h2>Aula 31: Atividade para fixação de conteúdo.</h2>
+</div>
+
