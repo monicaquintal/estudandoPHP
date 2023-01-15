@@ -39,6 +39,8 @@
     <a href="./operadores_aritmeticos.php">Operadores aritméticos</a><br>
     <a href="./operadores_atribuicao_aritmeticos.php">Operações aritméticas na atribuição de valores</a><br>
     <a href="./operadores_incremento_decremento.php">Operadores de incremento e decremento.</a><br>
+    <a href="./atividade_fixacao_2.php">Atividade 2.</a><br>
+    <a href="./funcoes_strings.php">Funções nativas para manipular strings.</a><br>
 </section>
 
 </main>

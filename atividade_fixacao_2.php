@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Curso PHP - Funções (exercpicio fixação)</title>
+    <title>Curso PHP - Funções (exercício fixação)</title>
   </head>
 
   <body>
@@ -31,3 +31,6 @@
   echo "O imposto será de R$ " . calcularImposto(6000) . ",00.";
   
   ?>
+
+  </body>
+</html>  

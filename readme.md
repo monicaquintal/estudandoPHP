@@ -38,6 +38,23 @@
 <a href="#aula29">Aula 29: Funções - Introdução</a><br>
 <a href="#aula30">Aula 30: Funções - Prática</a><br>
 <a href="#aula31">Aula 31: Atividades para fixação do conteúdo</a><br>
+<a href="#aula32">Aula 32: Funções nativas para manipular strings</a><br>
+<a href="#aula33">Aula 33: Funções nativas para tarefas matemáticas</a><br>
+<a href="#aula34">Aula 34: Funções nativas para manipular datas</a><br>
+<a href="#aula35">Aula 35: Array básico - Introdução</a><br>
+<a href="#aula36">Aula 36: Array básico - Prática</a><br>
+<a href="#aula37">Aula 37: Array multidimensional</a><br>
+<a href="#aula38">Aula 38: Array - Métodos de pesquisa</a><br>
+<a href="#aula39">Aula 39: Extra - False, Null e Empty</a><br>
+<a href="#aula40">Aula 40: Funções nativas para manipular arrays</a><br>
+<a href="#aula41">Aula 41: Loops parte 1 - Introdução</a><br>
+<a href="#aula42">Aula 42: Loops parte 2 - While</a><br>
+<a href="#aula43">Aula 43: Loops parte 3 - Do while</a><br>
+<a href="#aula44">Aula 44: Loops parte 4 - For</a><br>
+<a href="#aula45">Aula 45: Praticando um pouco - Percorrendo arrays</a><br>
+<a href="#aula46">Aula 46: Loops parte 5 - Foreach</a><br>
+<a href="#aula47">Aula 47: Praticando um pouco - Foreach em arrays</a><br>
+<a href="#aula48">Aula 48: Atividades para fixação de conteúdo</a><br>
 
 
 <hr>
@@ -879,3 +896,63 @@ return $imposto;
 
 echo "O imposto será de R$ " . calcularImposto(2000) . ",00.";
 ~~~
+
+
+
+<hr>
+
+<div id="aula32" align="center">
+<h2>Aula 32: Funções nativas para manipular strings.</h2>
+</div>
+
+> arquivo funcoes_strings.php
+
+Funções estudaas em aula:
+
+- strtolower($texto): transforma todos os caracteres da string em minúsculos.
+
+- strtoupper($texto): transforma todos os caracteres da string em maiúsculos.
+
+- ucfirst($texto): transforma o primeiro caracter da string em maiúsculo.
+
+- strlen($texto): conta a quantidade de caracteres de uma string.
+
+- str_replace(&lt;procura por&gt;, &lt;substitui por&gt;, $texto): substitui uma cadeia de caracteres por outra dentro de uma string.
+
+- substr($texto, &lt;posição inicial&gt;, &lt;qtde caracteres&gt;): retorna parte de uma string.
+
+~~~php
+$texto = "monica QUINTAL";
+echo $texto;
+echo "<br>";
+
+// string to lower:
+echo strtolower($texto);
+echo "<br>";
+
+// string to upper
+echo strtoupper($texto);
+echo "<br>";
+
+// uppercase first
+echo ucfirst($texto);
+echo "<br>";
+
+// string length - conta n° de caracteres (incluindo espaços em branco)
+echo strlen($texto);
+echo "<br>";
+
+// string replace - é case sensitive.
+echo str_replace("QUINTAL", "zungalo", $texto);
+echo "<br>";
+
+// substr (sub string)
+echo substr($texto, 0, 6);
+~~~
+
+
+<hr>
+
+<div id="aula33" align="center">
+<h2>Aula 33: Funções nativas para tarefas matemáticas.</h2>
+</div>
