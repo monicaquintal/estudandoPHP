@@ -834,6 +834,7 @@ function calcularAreaTerreno ($largura, $comprimento) {
 </div>
 
 > arquivo funcoes.php
+
 (aplicação dos exemplos da aula anterior)
 
 
@@ -843,3 +844,38 @@ function calcularAreaTerreno ($largura, $comprimento) {
 <h2>Aula 31: Atividade para fixação de conteúdo.</h2>
 </div>
 
+Enunciado:
+
+Crie uma função para calcular o imposto de renda a ser pago com base em um salário passado por um parâmetro.
+
+BASE DE CÁLCULO | ALÍQUOTA
+----------------|-------------
+Até 1903,98 | Isento
+De 1903,99 até R$ 2.826,65 | 7,5%
+De R$ 2.826,66 até R$ 3.751,05 | 15%
+De R$ 3.751,06 até R$ 4.664,68 | 22,5%
+Acima de 4.664,68 | 27,5%
+
+Resolução:
+
+~~~php
+function calcularImposto ($salario) { 
+
+$imposto = 0;
+
+if ($salario <= 1903.98) {
+  $imposto = 0;
+} else if ($salario >= 1903.99 && $salario <= 2826.65) {
+  $imposto = ($salario * 7.5)/100;
+} else if ($salario >= 2826.66 && $salario <= 3751.05) {
+  $imposto = ($salario * 15)/100;
+} else if ($salario >= 3751.06 && $salario <= 4664.08) {
+  $imposto = ($salario * 22.5)/100;
+} else {
+  $imposto = ($salario * 27.5)/100;
+}
+return $imposto;  
+}
+
+echo "O imposto será de R$ " . calcularImposto(2000) . ",00.";
+~~~
