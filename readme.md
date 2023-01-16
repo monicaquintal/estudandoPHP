@@ -1087,3 +1087,22 @@ echo "A diferença em segundos entre a data inicial e final é: " . $diferenca_e
 <div id="aula35" align="center">
 <h2>Aula 35: Array básico - Introdução.</h2>
 </div>
+
+Arrays são listas ordenadas; são variáveis que nos permitem relacionar itens associados a índices.
+
+Uma única variável armazena diversos valores!
+
+Exemplo:
+~~~php
+$lista_frutas[1] = 'Banana';
+$lista_frutas[2] = 'Maçã';
+$lista_frutas[3] = 'Morango';
+$lista_frutas[4] = 'Uva';
+~~~
+
+
+<hr>
+
+<div id="aula36" align="center">
+<h2>Aula 36: Array básico - Prática.</h2>
+</div>
