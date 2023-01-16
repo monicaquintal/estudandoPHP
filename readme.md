@@ -907,7 +907,7 @@ echo "O imposto será de R$ " . calcularImposto(2000) . ",00.";
 
 > arquivo funcoes_strings.php
 
-Funções estudaas em aula:
+Funções estudadas em aula:
 
 - strtolower($texto): transforma todos os caracteres da string em minúsculos.
 
@@ -955,4 +955,53 @@ echo substr($texto, 0, 6);
 
 <div id="aula33" align="center">
 <h2>Aula 33: Funções nativas para tarefas matemáticas.</h2>
+</div>
+
+> arquivo funcoes_matematicas.php
+
+Funções estudadas em aula:
+
+- ceil($numero): arredonda o valor para cima.
+
+- floor($numero): arredonda o valor para baixo.
+
+- round($numero): arredonda o valor com base nas casas decimais.
+
+- rand(): gera um número aleatório.
+
+- sqrt($numero): retorna a raiz quadrada.
+
+~~~php
+
+$numero = 9.999;
+
+// ceil() - arredonda para cima
+echo "ceil(9.999) = " . ceil($numero);
+
+// floor() - arredonda para baixo
+echo "floor(9.999) = " . floor($numero);
+
+/* round() - arredonda c/ base na fração:
+  de .0 a .4 - p/ bx
+  de .5 pra cima - p/ cima */  
+echo "round(9.999) = " . round($numero);
+
+/* rand() - gera valor aleatorio (de 0 até randmax)
+  *** a função nativa getrandmax() retorna esse valor máximo! */
+echo "rand(): " . rand();
+echo "getrandmax(): " . getrandmax();
+
+// podemos passar como parâmetros para rand(<início do intervalo>, <final do intervalo>)
+echo "rand(10, 20): " . rand(10, 20);
+echo "getrandmax(): " . getrandmax();
+
+// sqrt() - retorna raiz quadrada
+echo "sqtr(121) = " . sqrt(121);
+~~~
+
+
+<hr>
+
+<div id="aula34" align="center">
+<h2>Aula 34: Funções nativas para manipular datas.</h2>
 </div>
