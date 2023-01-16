@@ -78,6 +78,7 @@ Pode ser utilizado:
 
 Tem suporte a diversos BDs, e tem vasto suporte a diversos protocolos de comunicação.
 
+[Documentação PHP!](https://www.php.net/)
 
 <hr>
 
@@ -1004,4 +1005,85 @@ echo "sqtr(121) = " . sqrt(121);
 
 <div id="aula34" align="center">
 <h2>Aula 34: Funções nativas para manipular datas.</h2>
+</div>
+
+> arquivo funcoes_data.php
+
+Observação importante: O PHP possui uma configuração de timezone (zona) que define a aplicação do tempo sobre a data previamente carregada do sistema operacional!
+
+Funções estudadas em aula:
+
+- date(formato): recupera a data atual. Verificar na [documentação](https://www.php.net/manual/en/datetime.format.php) a forma correta de indicar os parâmetros/fomato.
+
+~~~php
+echo "F (mês), " . "d (dia), " . "o (ano) e " . "D (dia)";
+echo "<br>"; 
+echo date('F d o D');
+
+echo "(dia)/" . "(mês)/" . "(ano)" . " " . " hora:" . "minutos";
+echo "<br>"; 
+echo date('d/m/Y H:i');
+~~~
+
+- date_default_timezone_get(timezone): recupera o timezone default da aplicação.
+
+~~~php
+echo "timezone: ";
+echo date_default_timezone_get();
+echo "<br>"; 
+echo date('d/m/Y H:i');
+~~~
+
+- date_default_timezone_set(timezone): atualiza o timezone default da aplicação.
+(podemos fazer a modificação de timezone diretamente no ambiente em que o PHP está instalado OU no tempo de execução, utilizando a instrução acima)
+Acessar a [documentação](https://www.php.net/manual/en/timezones.php) para verificar as timezones possíveis.
+*America/Sao_Paulo* é o timezone oficial do BR.
+
+~~~php
+date_default_timezone_set('America/Sao_Paulo');
+echo "timezone set: ";
+echo date_default_timezone_get();
+echo "<br>"; 
+echo date('d/m/Y H:i');
+~~~
+
+- strtotime(data): transformar datas textuais em segundos.
+
+~~~php
+// padrão computacional: ano-mês-dia
+$data_inicial = '2023-01-01';
+$data_final = '2023-01-15';
+
+// descobrir quantos dias há entre a data inicial e a final
+
+//timestamp = 01/01/1970 (início da era Unix)
+
+$time_inicial = strtotime($data_inicial);
+$time_final = strtotime($data_final);
+
+// calcula tempo entre data inicial e 01/01/1970
+// JS retorna milissegundos; php retorna segundos!!!
+
+echo $data_inicial . " - " . $time_inicial . " segundos." . "<br>";
+
+echo $data_final . " - " . $time_final . " segundos." . "<br>";
+
+$diferenca_times = abs($time_final - $time_inicial);
+
+// função abs: converte o resultado em seu respectivo valor absoluto (positivo), caso necessário
+
+echo "A diferença em segundos entre a data inicial e final é: " . $diferenca_times . "<br>";
+
+// 1 dia = 24 horas * 60 minutos * 60 segundos 
+// um dia possui 86400 segundos! 
+$diferenca_em_dias = $diferenca_times / 86400;
+
+echo "A diferença em segundos entre a data inicial e final é: " . $diferenca_em_dias;
+~~~
+
+
+<hr>
+
+<div id="aula35" align="center">
+<h2>Aula 35: Array básico - Introdução.</h2>
 </div>
