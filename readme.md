@@ -7,6 +7,7 @@
 <div align="justify">
 
 ## Introdução ao PHP
+
 <a href="#aula01">Aula 01: O que é PHP?</a><br>
 <a href="#aula02">Aula 02: Embutindo blocos PHP em páginas HTML</a><br>
 <a href="#aula03">Aula 03: Habilitando e testando tags curtas (short_open_tag)</a><br>
@@ -56,7 +57,6 @@
 <a href="#aula47">Aula 47: Praticando um pouco - Foreach em arrays</a><br>
 <a href="#aula48">Aula 48: Atividades para fixação de conteúdo</a><br>
 
-
 <hr>
 
 <div id="aula01" align="center">
@@ -68,6 +68,7 @@ PHP = "Hypertext Preprocessor"; seu uso é livre.
 É uma linguagem de programação focada na criação de aplicações do lado do servidor.
 
 Pode ser utilizado:
+
 - diretamente na linha de comando (scripts de linha e comando, que podem ser executados diretamente pelo shell do SO);
 - aplicações desktop (PHP - GTK);
 - aplicações server-side (scripts).
@@ -90,15 +91,14 @@ Formas de inclusão do PHP em arquivos HTML:
 
 <div align="center">
 
-NOME | TAG | STATUS
-:---------:|:-----------:|:-------:
-Tag padrão | &lt;?php código aqui ?&gt; | Habilitada
-Tag de impressão | &lt;?= php código aqui ?&gt; | Habilitada
-Tag curta | &lt;? código aqui ?&gt; | Desabilitada
-*Asp tag | &lt;% código aqui %&gt; | Descontinuada na versão 7
+|       NOME       |             TAG              |          STATUS           |
+| :--------------: | :--------------------------: | :-----------------------: |
+|    Tag padrão    |  &lt;?php código aqui ?&gt;  |        Habilitada         |
+| Tag de impressão | &lt;?= php código aqui ?&gt; |        Habilitada         |
+|    Tag curta     |   &lt;? código aqui ?&gt;    |       Desabilitada        |
+|    \*Asp tag     |   &lt;% código aqui %&gt;    | Descontinuada na versão 7 |
 
 </div>
-
 
 <hr>
 
@@ -108,10 +108,9 @@ Tag curta | &lt;? código aqui ?&gt; | Desabilitada
 
 A tag curta não está mais disponível na versão 8 do PHP! Utilizar a tag padrão:
 
-~~~php
+```php
 <?php código aqui ?>
-~~~
-
+```
 
 <hr>
 
@@ -127,14 +126,14 @@ A última instrução não precisa de ";".
 
 Echo é um construtor de linguagem, enquanto o print inicialmente era uuma função.
 
-~~~php
+```php
 <?php
   echo 'Comando echo <br>';
   print 'Comando print<hr>';
 ?>
-~~~
+```
 
->arquivo echo_print.php
+> arquivo echo_print.php
 
 <hr>
 
@@ -146,7 +145,6 @@ Páginas estáticas são arquivos HTML com codificação hardcode, sem tratativa
 
 Se a solicitação recebida for um arquivo PHP, então repassa a solicitação para o interpretador do PHP. Isso faz com que abra o script solicitado, interprete e devolva o retorno (uma página HTML) ao Apache.
 
-
 <hr>
 
 <div id="aula06" align="center">
@@ -155,19 +153,18 @@ Se a solicitação recebida for um arquivo PHP, então repassa a solicitação p
 
 Importante para manutenção de estruturas e documentação.
 
-~~~php
+```php
 // comentário de uma linha
 
 # comentário de uma linha no estilo shell
 
 /*
-  Comentário de 
+  Comentário de
   múltiplas linhas
 */
-~~~
+```
 
->arquivo comentarios.php
-
+> arquivo comentarios.php
 
 <hr>
 
@@ -178,6 +175,7 @@ Importante para manutenção de estruturas e documentação.
 **Variáveis** são utilizadas para armazenamento de dados. Em PHP, há tipos específicos de variáveis (que definem o tipo de dado que está presente na variável): string, int, float, boolean, array, ...
 
 Regras para declaração de variáveis em PHP:
+
 - deve obigatoriamente iniciar com o caractere **$**.
 - não pode conter espaços ou caracteres especiais (com exceção do underline).
 
@@ -187,16 +185,15 @@ Case sensitive!!!
 
 Exemplos: $nome, $fone1, $endereco_2
 
-
 <hr>
 
 <div id="aula08" align="center">
 <h2>Aula 08: Variáveis - Prática (string, int, float e boolean).</h2>
 </div>
 
->arquivo variaveis.php
+> arquivo variaveis.php
 
-~~~php
+```php
 <body>
 <?php
 // string
@@ -208,14 +205,13 @@ $altura = 1.59;
 //boolean
 $fumante = false; // true = 1 e false = vazio (nada é retornado)
 ?>
-  
+
 <h1>Ficha cadastral</h1>
 <p>Nome: <?= $nome ?></p>
 <p>Idade: <?= $idade ?></p>
 <p>Altura: <?= $altura ?></p>
 <p>Fumante? <?= $fumante ?></p>
-~~~
-
+```
 
 <hr>
 
@@ -223,10 +219,9 @@ $fumante = false; // true = 1 e false = vazio (nada é retornado)
 <h2>Aula 09: Alterando valores de variáveis.</h2>
 </div>
 
->arquivo variaveis.php
+> arquivo variaveis.php
 
 Em qualquer momento da lógica do script poderemos alterar os valores das variáveis. A alteração também pode ocorrer a nível de tipo (característico de linguagens de tipagem fraca).
-
 
 <hr>
 
@@ -234,7 +229,7 @@ Em qualquer momento da lógica do script poderemos alterar os valores das variá
 <h2>Aula 10: Concatenação.</h2>
 </div>
 
->arquivo concatenacao.php
+> arquivo concatenacao.php
 
 A concatenação é realizada a partir do operador "**.**"!
 
@@ -243,7 +238,7 @@ Também podemos utilizar aspas duplas para fazer a concatenação de cadeias de 
 
 Como aspas simples não dão margem pra concatenação em seu interior (apenas com .), são mais rápidas que as duplas (que sempre serão verificadas)!
 
-~~~php
+```php
 $nome = "Mônica";
 $idade = 31;
 $cor = "rosa";
@@ -254,28 +249,28 @@ echo "Olá, meu nome é " . $nome . "! Tenho " . $idade . " anos e minha cor fav
 echo "<br>";
 
 // utilização de aspas duplas para concatenação
-echo "Olá, $nome! Tudo bem?" 
-~~~
-
+echo "Olá, $nome! Tudo bem?"
+```
 
 <hr>
 
 <div id="aula11" align="center">
 <h2>Aula 11: Variáveis constantes.</h2>
-</div>  
+</div>
 
 São variáveis cujos valores não podem ser modificados (não podem ser sobrepostos). Geralmente são utilizadas para parametrização de informações de ambiente da aplicação (ambiente de desenvolvimento). Dão uma maior segurança ao código (quando migramos ao ambiente de produção, por exemplo).
 
->arquivo variaveis_constantes.php
+> arquivo variaveis_constantes.php
 
-Para criação de variáveis constantes, utilizar a função **define()**, que tem dois parâmetros: 
+Para criação de variáveis constantes, utilizar a função **define()**, que tem dois parâmetros:
+
 - nome da variável (em formato de string);
 - e valor!
 
-Sempre utilizar *caracteres maiúsculos* (boas práticas)!
+Sempre utilizar _caracteres maiúsculos_ (boas práticas)!
 Não é necessário utilizar $.
 
-~~~php
+```php
 define('BD_URL', 'endereco_bd_dev');
 define('BD_USUARIO', 'usuario_dev');
 define('BD_SENHA', 'senha_dev');
@@ -283,29 +278,30 @@ define('BD_SENHA', 'senha_dev');
 echo BD_URL . '<br>';
 echo BD_USUARIO . '<br>';
 echo BD_SENHA;
-~~~
-
+```
 
 <hr>
 
 <div id="aula12" align="center">
 <h2>Aula 12: If/else parte 1 - Introdução.</h2>
-</div>  
+</div>
 
 É uma estrutura de controle, que permite definir o fluxo que a aplicação tomará, a partir de uma determinada condição.
 A instrução else é opcional.
 
 Sintaxe:
-~~~
+
+```
 if (condição) {
   // trecho de código que será executado
 } else {
   // trecho de código que será executado
 }
-~~~
+```
 
 Encadeado:
-~~~
+
+```
 if (condição) {
   // trecho de código que será executado
 } else if (condicão) {
@@ -313,37 +309,35 @@ if (condição) {
 } else {
   // trecho de código que será executado
 }
-~~~
-
+```
 
 <hr>
 
 <div id="aula13" align="center">
 <h2>Aula 13: Operadores de comparação (condicionais).</h2>
-</div>  
+</div>
 
 Também conhecidos como operadores relacionais, são capazes de formar as expressões condicionais, que serão colocadas dentro dos comandos if.
 
 São eles (9):
 
-OPERADOR | REPRESENTAÇÃO | SIGNIFICADO
----------|:---------------:|--------------
-Igual | == | Verifica se os valores comparados são iguais
-Idêntico | === | Verifica se os valores comparados são iguais e do mesmo tipo
-Diferente | != | Verifica se os valores comparados são diferentes
-Diferente | &lt;&gt; | Verifica se os valores comparados são diferentes
-Não idêntico | !== | Verifica se os valores comparados são diferentes e de tipos diferentes
-Menor | &lt; | Verifica se o valor da esquerda é menor que o da direita
-Maior | &gt; | Verifica se o valor da esquerda é maior que o da direita
-Menor igual | &lt;= | Verifica se o valor da esquerda é menor ou igual ao da direita
-Maior igual | &gt;= | Verifica se o valor da esquerda é maior ou igual ao da direita
-
+| OPERADOR     | REPRESENTAÇÃO | SIGNIFICADO                                                            |
+| ------------ | :-----------: | ---------------------------------------------------------------------- |
+| Igual        |      ==       | Verifica se os valores comparados são iguais                           |
+| Idêntico     |      ===      | Verifica se os valores comparados são iguais e do mesmo tipo           |
+| Diferente    |      !=       | Verifica se os valores comparados são diferentes                       |
+| Diferente    |   &lt;&gt;    | Verifica se os valores comparados são diferentes                       |
+| Não idêntico |      !==      | Verifica se os valores comparados são diferentes e de tipos diferentes |
+| Menor        |     &lt;      | Verifica se o valor da esquerda é menor que o da direita               |
+| Maior        |     &gt;      | Verifica se o valor da esquerda é maior que o da direita               |
+| Menor igual  |     &lt;=     | Verifica se o valor da esquerda é menor ou igual ao da direita         |
+| Maior igual  |     &gt;=     | Verifica se o valor da esquerda é maior ou igual ao da direita         |
 
 <hr>
 
 <div id="aula14" align="center">
 <h2>Aula 14: If/else parte 2: Praticando com operadores de comparação.</h2>
-</div>  
+</div>
 
 > arquivo ifelse_operadores_condicionais.php
 
@@ -351,22 +345,20 @@ Aplicação dos operadores de comparação apresentados na aula anterior.
 
 Podemos omitir as chaves, caso o if possua apenas uma instrução. Entretanto, recomenda-se sempre abrir e fechar as chaves (para definir o bloco de código explicitamente).
 
-
 <hr>
 
 <div id="aula15" align="center">
 <h2>Aula 15: Operadores lógicos.</h2>
-</div>  
+</div>
 
 Operadores lógicos permitem conectar operações de comparação, a fim de criar condições mais exigentes.
 
-OPERADOR | REPRESENTAÇÃO | SIGNIFICADO
-:---------:|:---------------:|--------------
-E | AND ou && | V se todas as expressões forem V
-OU | OR ou &#124;&#124; | V se pelo menos uma das expressões for V
-Xor | XOR | V apenas se uma das expressões for V, mas não ambas
-Negação | ! | Inverte o resultado da expressão
-
+| OPERADOR |   REPRESENTAÇÃO    | SIGNIFICADO                                         |
+| :------: | :----------------: | --------------------------------------------------- |
+|    E     |     AND ou &&      | V se todas as expressões forem V                    |
+|    OU    | OR ou &#124;&#124; | V se pelo menos uma das expressões for V            |
+|   Xor    |        XOR         | V apenas se uma das expressões for V, mas não ambas |
+| Negação  |         !          | Inverte o resultado da expressão                    |
 
 <hr>
 
@@ -380,7 +372,7 @@ Operadores lógicos podem conectar de 2 a n operações de comparação!
 
 Os parênteses permitem estabelecer precedência (o interpretador lerá primeiro o que está nos parênteses, e inicialmente os mais internos).
 
-~~~php
+```php
 // E - && (retorna V se todos os resultados forem V)
 
 if(5 == 3 && 10 > 3) {
@@ -388,9 +380,9 @@ if(5 == 3 && 10 > 3) {
 } else {
   echo 'Falso';
 }
-~~~
+```
 
-~~~php
+```php
 // OU - || (retorna V se pelo menos um dos resultados for V)
 
 if(5 == 5 || 10 < 3) {
@@ -398,26 +390,25 @@ if(5 == 5 || 10 < 3) {
 } else {
   echo 'Falso';
 }
-~~~
+```
 
-~~~php
+```php
 // XOR - XOR (V se uma das expressões for V e a outra F, ou vice-versa).
 if(5 == 5 XOR 10 > 3) {
   echo 'Verdadeiro';
 } else {
   echo 'Falso';
 }
-~~~
+```
 
-~~~php
+```php
 // negação - ! (inverte o resultado da expressão)
 if(!('a' == 'b')) {
   echo 'Verdadeiro';
 } else {
   echo 'Falso';
 }
-~~~
-
+```
 
 <hr>
 
@@ -431,7 +422,7 @@ Exemplo de uma situação em um e-commerce, onde: é dado frete gratuito se o us
 
 Obs: se for testar variável do tipo booleana dentro de um operador lógico, não precisamos compararcom "==", apenas indicar a variável.
 
-~~~php
+```php
 <?php
 $usuario_possui_cartao_loja = true;
 $valor_compra = 99;
@@ -471,7 +462,7 @@ if ($usuario_possui_cartao_loja && $valor_compra >= 100) {
 </p>
 
 <p>Valor do frete: <?= $valor_frete?></p>
-~~~
+```
 
 <hr>
 
@@ -481,7 +472,7 @@ if ($usuario_possui_cartao_loja && $valor_compra >= 100) {
 
 > arquivo ifelse_praticando_mais_um_pouco.php
 
-~~~php
+```php
 <?php
   $usuario_possui_cartao_loja = true;
   $valor_compra = 250;
@@ -528,8 +519,7 @@ if ($usuario_possui_cartao_loja && $valor_compra >= 100) {
 </p>
 
 <p>Valor do frete: <?= $valor_frete ?></p>
-~~~
-
+```
 
 <hr>
 
@@ -540,13 +530,14 @@ if ($usuario_possui_cartao_loja && $valor_compra >= 100) {
 Permite, com base em determinada condição, seguir ou não um fluxo. É mais limitado, pois retorna apenas uma instrução quando V ou F. Entretanto, são menos verbosos.
 
 Sintaxe:
-~~~
+
+```
 // <condição> ? true : false
-~~~
+```
 
 Exemplo (aplicando com base no exercício da aula anterior):
 
-~~~php
+```php
 <h1>Detalhes do pedido</h1>
 <p>Possui cartão da loja? <?= $usuario_possui_cartao_loja ? 'SIM' : 'NÃO'; ?></p>
     // ou $usuario_possui_cartao_loja == true ?  'SIM' : 'NÃO';
@@ -556,13 +547,12 @@ Exemplo (aplicando com base no exercício da aula anterior):
 <p>Recebeu desconto no frete?
     <?php
       $teste = $recebeu_desconto_frete ? 'SIM' : 'NÃO';
-      echo $teste; 
+      echo $teste;
     ?>
 </p>
-~~~
+```
 
 Apesar de não ser uma prática recomendada, há a possibilidade de utilizar operadores ternários encadeados (com parênteses).
-
 
 <hr>
 
@@ -578,7 +568,8 @@ Enunciado:
 Se a idade informada estiver entre (e inclusive) 16 e 69 anos e o peso for igual ou superior a 50kg, então o sistema deve imprimir a mensagem "Atende aos requisitos", caso contrário o sistema deve imprimir a mensagem "Não atende aos requisitos".
 
 Resolução:
-~~~php
+
+```php
 $idade = 90;
 $peso = 45;
 
@@ -587,8 +578,7 @@ if ($peso >= 50 && ($idade >= 16 && $idade <= 69)) {
 } else {
   echo 'Não atende aos requisitos...';
 }
-~~~
-
+```
 
 <hr>
 
@@ -602,7 +592,7 @@ if ($peso >= 50 && ($idade >= 16 && $idade <= 69)) {
 
 Exemplo:
 
-~~~php
+```php
 $opcao = 2
 
 switch ($opcao) {
@@ -618,8 +608,7 @@ switch ($opcao) {
     // trecho de código que será executado
     break;
 }
-~~~
-
+```
 
 <hr>
 
@@ -633,7 +622,7 @@ A comparação é por **igualdade**, e não por identidade (diferente do JS)!!! 
 
 Nos cases, podemos utilizar valores que não são numéricos (como strings) - há flexibilidade no PHP.
 
-~~~php
+```php
 $parametro = 'Mônica';
 
 switch ($parametro) {
@@ -645,7 +634,7 @@ case 1:
 case 2:
   echo 'Entrou no case 2';
   break;
-    
+
 case 3:
   echo 'Entrou no case 3';
   break;
@@ -654,10 +643,9 @@ default:
   echo 'Entrou no default!';
   break;
   }
-~~~
+```
 
 OBS: quando o valor booleano é true, o PHP retorna o resultado "1".
-
 
 <hr>
 
@@ -675,13 +663,13 @@ A função gettype() espera um parâmetro e retorna o seu tipo. É importante pa
 
 Para realizar o casting:
 
-~~~
+```
 $variável_que_queremos_converter = (tipo de variável esperada) $nova_variavel
-~~~
+```
 
 O tipo "real" não é mais suportado no PHP; utilizar double ou float.
 
-~~~php
+```php
 //gettype() - retorna o tipo de uma variável
 $valor = 10;
 echo $valor . ', ' . gettype($valor);
@@ -697,8 +685,7 @@ echo '<br>';
 // para converter para string
 $valor3 = (string)$valor;
 echo $valor3 . ', ' . gettype($valor3);
-~~~
-
+```
 
 <hr>
 
@@ -708,14 +695,13 @@ echo $valor3 . ', ' . gettype($valor3);
 
 Operadores matemáticos que permitem efetuar cálculos.
 
-OPERADOR | REPRESENTAÇÃO | FUNÇÃO 
-:---------:|:---------------:|--------------
-Adição | + | Soma valores
-Subtração | - | Diferença entre valores
-Multiplicação | * | Produto dos valores
-Divisão | / | Quociente dos valores
-Módulo | % | Resto existente em uma operação de divisão
-
+|   OPERADOR    | REPRESENTAÇÃO | FUNÇÃO                                     |
+| :-----------: | :-----------: | ------------------------------------------ |
+|    Adição     |       +       | Soma valores                               |
+|   Subtração   |       -       | Diferença entre valores                    |
+| Multiplicação |      \*       | Produto dos valores                        |
+|    Divisão    |       /       | Quociente dos valores                      |
+|    Módulo     |       %       | Resto existente em uma operação de divisão |
 
 <hr>
 
@@ -725,7 +711,7 @@ Módulo | % | Resto existente em uma operação de divisão
 
 > arquivo operadores_aritmeticos.php
 
-~~~php
+```php
 
 $num1 = 12;
 $num2 = 6;
@@ -748,8 +734,7 @@ echo '<br>';
 
 // módulo
 echo "O módulo entre $num1 e $num2 é " . ($num1 % $num2) . '!';
-~~~
-
+```
 
 <hr>
 
@@ -761,20 +746,18 @@ echo "O módulo entre $num1 e $num2 é " . ($num1 % $num2) . '!';
 
 Podemos combinar o operador aritmético com a atribuição: primeiro vem o operador (à esquerda), em seguida a atribuição (+=, por exemplo). Isso deixa a sintaxe mais enxuta!
 
-
 <hr>
 
 <div id="aula27" align="center">
 <h2>Aula 27: Operadores de incremento/decremento.</h2>
 </div>
 
-OPERADOR | REPRESENTAÇÃO | FUNÇÃO 
-:---------:|:---------------:|--------------
-Pré-incremento | ++$a | Add uma unidade antes de retornar $a
-Pós-incremento | $a++ | Retorna $a e depois adiciona uma unidade
-Pré-decremento| --$a | Diminui uma unidade antes de retornar $a
-Pós-decremento | $a-- | Retorna $a e depois diminui uma unidade
-
+|    OPERADOR    | REPRESENTAÇÃO | FUNÇÃO                                   |
+| :------------: | :-----------: | ---------------------------------------- |
+| Pré-incremento |     ++$a      | Add uma unidade antes de retornar $a     |
+| Pós-incremento |     $a++      | Retorna $a e depois adiciona uma unidade |
+| Pré-decremento |     --$a      | Diminui uma unidade antes de retornar $a |
+| Pós-decremento |     $a--      | Retorna $a e depois diminui uma unidade  |
 
 <hr>
 
@@ -784,7 +767,7 @@ Pós-decremento | $a-- | Retorna $a e depois diminui uma unidade
 
 > arquivo operadores_incremento_decremento.php
 
-~~~php
+```php
 <h3>Pós-incremento</h3>
 <?php
 $a = 7;
@@ -816,8 +799,7 @@ echo "O valor contido em a é $a <br>";
 echo 'O valor contido em a pré decremento (--a) ' . --$a . ' <br>';
 echo "O atualizado é  $a <br>";
 ?>
-~~~
-
+```
 
 <hr>
 
@@ -833,7 +815,7 @@ As funções podem ser do tipo void ou com retorno!
 
 Exemplos:
 
-~~~php
+```php
 function exibirBoasVindas () {
   echo "Bem-vindo ao Curso de PHP";
 }
@@ -842,8 +824,7 @@ function calcularAreaTerreno ($largura, $comprimento) {
   $area = $largura * $comprimento;
   return $area;
 }
-~~~
-
+```
 
 <hr>
 
@@ -855,7 +836,6 @@ function calcularAreaTerreno ($largura, $comprimento) {
 
 (aplicação dos exemplos da aula anterior)
 
-
 <hr>
 
 <div id="aula31" align="center">
@@ -866,18 +846,18 @@ Enunciado:
 
 Crie uma função para calcular o imposto de renda a ser pago com base em um salário passado por um parâmetro.
 
-BASE DE CÁLCULO | ALÍQUOTA
-----------------|-------------
-Até 1903,98 | Isento
-De 1903,99 até R$ 2.826,65 | 7,5%
-De R$ 2.826,66 até R$ 3.751,05 | 15%
-De R$ 3.751,06 até R$ 4.664,68 | 22,5%
-Acima de 4.664,68 | 27,5%
+| BASE DE CÁLCULO                | ALÍQUOTA |
+| ------------------------------ | -------- |
+| Até 1903,98                    | Isento   |
+| De 1903,99 até R$ 2.826,65     | 7,5%     |
+| De R$ 2.826,66 até R$ 3.751,05 | 15%      |
+| De R$ 3.751,06 até R$ 4.664,68 | 22,5%    |
+| Acima de 4.664,68              | 27,5%    |
 
 Resolução:
 
-~~~php
-function calcularImposto ($salario) { 
+```php
+function calcularImposto ($salario) {
 
 $imposto = 0;
 
@@ -892,13 +872,11 @@ if ($salario <= 1903.98) {
 } else {
   $imposto = ($salario * 27.5)/100;
 }
-return $imposto;  
+return $imposto;
 }
 
 echo "O imposto será de R$ " . calcularImposto(2000) . ",00.";
-~~~
-
-
+```
 
 <hr>
 
@@ -922,7 +900,7 @@ Funções estudadas em aula:
 
 - substr($texto, &lt;posição inicial&gt;, &lt;qtde caracteres&gt;): retorna parte de uma string.
 
-~~~php
+```php
 $texto = "monica QUINTAL";
 echo $texto;
 echo "<br>";
@@ -949,8 +927,7 @@ echo "<br>";
 
 // substr (sub string)
 echo substr($texto, 0, 6);
-~~~
-
+```
 
 <hr>
 
@@ -972,7 +949,7 @@ Funções estudadas em aula:
 
 - sqrt($numero): retorna a raiz quadrada.
 
-~~~php
+```php
 
 $numero = 9.999;
 
@@ -984,7 +961,7 @@ echo "floor(9.999) = " . floor($numero);
 
 /* round() - arredonda c/ base na fração:
   de .0 a .4 - p/ bx
-  de .5 pra cima - p/ cima */  
+  de .5 pra cima - p/ cima */
 echo "round(9.999) = " . round($numero);
 
 /* rand() - gera valor aleatorio (de 0 até randmax)
@@ -998,8 +975,7 @@ echo "getrandmax(): " . getrandmax();
 
 // sqrt() - retorna raiz quadrada
 echo "sqtr(121) = " . sqrt(121);
-~~~
-
+```
 
 <hr>
 
@@ -1015,41 +991,41 @@ Funções estudadas em aula:
 
 - date(formato): recupera a data atual. Verificar na [documentação](https://www.php.net/manual/en/datetime.format.php) a forma correta de indicar os parâmetros/fomato.
 
-~~~php
+```php
 echo "F (mês), " . "d (dia), " . "o (ano) e " . "D (dia)";
-echo "<br>"; 
+echo "<br>";
 echo date('F d o D');
 
 echo "(dia)/" . "(mês)/" . "(ano)" . " " . " hora:" . "minutos";
-echo "<br>"; 
+echo "<br>";
 echo date('d/m/Y H:i');
-~~~
+```
 
 - date_default_timezone_get(timezone): recupera o timezone default da aplicação.
 
-~~~php
+```php
 echo "timezone: ";
 echo date_default_timezone_get();
-echo "<br>"; 
+echo "<br>";
 echo date('d/m/Y H:i');
-~~~
+```
 
 - date_default_timezone_set(timezone): atualiza o timezone default da aplicação.
-(podemos fazer a modificação de timezone diretamente no ambiente em que o PHP está instalado OU no tempo de execução, utilizando a instrução acima)
-Acessar a [documentação](https://www.php.net/manual/en/timezones.php) para verificar as timezones possíveis.
-*America/Sao_Paulo* é o timezone oficial do BR.
+  (podemos fazer a modificação de timezone diretamente no ambiente em que o PHP está instalado OU no tempo de execução, utilizando a instrução acima)
+  Acessar a [documentação](https://www.php.net/manual/en/timezones.php) para verificar as timezones possíveis.
+  _America/Sao_Paulo_ é o timezone oficial do BR.
 
-~~~php
+```php
 date_default_timezone_set('America/Sao_Paulo');
 echo "timezone set: ";
 echo date_default_timezone_get();
-echo "<br>"; 
+echo "<br>";
 echo date('d/m/Y H:i');
-~~~
+```
 
 - strtotime(data): transformar datas textuais em segundos.
 
-~~~php
+```php
 // padrão computacional: ano-mês-dia
 $data_inicial = '2023-01-01';
 $data_final = '2023-01-15';
@@ -1074,13 +1050,12 @@ $diferenca_times = abs($time_final - $time_inicial);
 
 echo "A diferença em segundos entre a data inicial e final é: " . $diferenca_times . "<br>";
 
-// 1 dia = 24 horas * 60 minutos * 60 segundos 
-// um dia possui 86400 segundos! 
+// 1 dia = 24 horas * 60 minutos * 60 segundos
+// um dia possui 86400 segundos!
 $diferenca_em_dias = $diferenca_times / 86400;
 
 echo "A diferença em segundos entre a data inicial e final é: " . $diferenca_em_dias;
-~~~
-
+```
 
 <hr>
 
@@ -1093,16 +1068,85 @@ Arrays são listas ordenadas; são variáveis que nos permitem relacionar itens 
 Uma única variável armazena diversos valores!
 
 Exemplo:
-~~~php
+
+```php
 $lista_frutas[1] = 'Banana';
 $lista_frutas[2] = 'Maçã';
 $lista_frutas[3] = 'Morango';
 $lista_frutas[4] = 'Uva';
-~~~
-
+```
 
 <hr>
 
 <div id="aula36" align="center">
 <h2>Aula 36: Array básico - Prática.</h2>
+</div>
+
+> arquivo array_basico.php
+
+Importante:
+
+- "array()" com a minúsculo!
+- itens separados por vírgulas.
+- cada item do array recebe uma chave numérica (ou índice), que vai de 0 a n!
+
+Para fazer testes e debugar, podemos utilizar duas funções:
+
+- **var_dump(&lt;array&gt;)**
+  - dá detalhes adicionais;
+  - dá acesso ao tipo de dado que é representado em cada índice.
+- **print_r(&lt;array&gt;)**
+
+Utilizar echo "&lt;pre&gt;" para auxiliar na formatação do conteúdo do array e facilitar na visualização!
+
+Para **incluir novos índices em um array já criado**:
+
+- abrir e fechar colchetes;
+- na sequência, atribuir novo valor.
+
+Em vez de indicar a palavra "array", podemos apenas abrir e fechar colchetes! Exemplo:
+
+```php
+    $lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'];
+```
+
+Para **recuperar um item específico** do array:
+
+- recuperar a variável que contém o array e imprimir o valor contido em determinado índice; exemplo:
+
+```php
+echo $lista_frutas[2];
+```
+
+Praticando:
+
+```php
+// Arrays sequenciais (numéricos)
+$lista_frutas = array('Banana', 'Maçã', 'Morango', 'Uva');
+$lista_frutas[] = 'Abacaxi';
+
+echo '<pre>';
+var_dump($lista_frutas);
+echo '<hr>';
+echo '<pre>';
+print_r($lista_frutas);
+
+// Para impromir um item específico:
+echo '<hr>';
+echo $lista_frutas[2];
+echo '<hr>';
+
+// Arrays associativos - a diferença é que os indices serão explícitos (nós os definiremos!!!)
+$lista_frutas_associativo = array('a' => 'Banana', 'b' => 'Maçã', 'x' => 'Morango', '2' => 'Uva');
+$lista_frutas_associativo[] = 'Abacaxi';
+
+echo '<pre>';
+var_dump($lista_frutas_associativo);
+echo $lista_frutas_associativo['x'];
+```
+
+<hr>
+
+<div id="aula37" align="center">
+<h2>Aula 37: Array multidimensional.</h2>
 </div>
