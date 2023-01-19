@@ -1010,10 +1010,10 @@ echo "<br>";
 echo date('d/m/Y H:i');
 ```
 
-- date_default_timezone_set(timezone): atualiza o timezone default da aplicação.
+- date*default_timezone_set(timezone): atualiza o timezone default da aplicação.
   (podemos fazer a modificação de timezone diretamente no ambiente em que o PHP está instalado OU no tempo de execução, utilizando a instrução acima)
   Acessar a [documentação](https://www.php.net/manual/en/timezones.php) para verificar as timezones possíveis.
-  _America/Sao_Paulo_ é o timezone oficial do BR.
+  \_America/Sao_Paulo* é o timezone oficial do BR.
 
 ```php
 date_default_timezone_set('America/Sao_Paulo');
@@ -1151,7 +1151,7 @@ echo $lista_frutas_associativo['x'];
 <h2>Aula 37: Array multidimensional.</h2>
 </div>
 
-Sâo arrays de arrays! 
+Sâo arrays de arrays!
 
 Através de uma variável i ou índice, podemos acessar outro array (encadear no índice outros arrays, criando quantas dimensões forem necessárias para atender às necessidades)!
 
@@ -1159,7 +1159,7 @@ Através de uma variável i ou índice, podemos acessar outro array (encadear no
 
 Praticando:
 
-~~~php
+```php
     // array $lista_coisas
     $lista_coisas = array();
 
@@ -1178,8 +1178,7 @@ Praticando:
     echo $lista_coisas['frutas'][3];
     echo '<br>';
     echo $lista_coisas['pessoas'][2];
-~~~
-
+```
 
 <hr>
 
@@ -1187,20 +1186,23 @@ Praticando:
 <h2>Aula 38: Array - Métodos de pesquisa.</h2>
 </div>
 
+> arquivo array_pesquisa.php
+
 1. Método in_array():
 
 Retorna **true ou false** para a existência do que está sendo procurado!
 
-~~~php
+```php
 in_array(<item que estamos procurando>, <array>);
-~~~
+```
 
 **Importante:**
+
 - Se o retorno for true: texto impresso será 1;
 - Se o retorno for falso: texto impresso será 'vazio'.
-Podemos criar uma lógica que garante um retorno mais intuitivo, atribuindo o método in_array() a uma ariável, e associá-la a uma estrutura if/else, por exemplo, como abaixo:
+  Podemos criar uma lógica que garante um retorno mais intuitivo, atribuindo o método in_array() a uma ariável, e associá-la a uma estrutura if/else, por exemplo, como abaixo:
 
-~~~php
+```php
 $lista_frutas = array('Banana', 'Maçã', 'Morango', 'Uva');
 
 $existe = in_array('Laranja', $lista_frutas);
@@ -1210,22 +1212,23 @@ if ($existe) { //true
 } else { // false
   echo 'Não, o valor pesquisado não existe no array! :(';
 }
-~~~
+```
 
 2. Método array_search():
 
 Retorna o **índice** do valor pesquisado, caso ele exista.
 
-~~~php
+```php
 array_search(<item que estamos procurando>, <array>);
-~~~
+```
 
 **Importante:**
-- Se o item existir no array: retorna o índice;
-- Se não existir: retorna null (não é necessariamente o valor false!!!). A representação textual é vazio. 
-Podemos também utilizar if/else para apresentar um texto mais intuitivo ao usuário, como abaixo:
 
-~~~php
+- Se o item existir no array: retorna o índice;
+- Se não existir: retorna null (não é necessariamente o valor false!!!). A representação textual é vazio.
+  Podemos também utilizar if/else para apresentar um texto mais intuitivo ao usuário, como abaixo:
+
+```php
 $lista_frutas = array('Banana', 'Maçã', 'Morango', 'Uva');
 
 $existe = array_search('Laranja', $lista_frutas);
@@ -1235,7 +1238,7 @@ if ($existe != null) {
 } else {
   echo 'Não, o valor pesquisado não existe no array! :(';
 }
-~~~
+```
 
 3. Para arrays multidimensionais:
 
@@ -1243,7 +1246,7 @@ Na essência, trata-se de um array normal para a pesquisa, pois o método atuar�
 
 Exemplo:
 
-~~~php
+```php
 $lista_frutas = array('Banana', 'Maçã', 'Morango', 'Uva');
 
 $lista_coisas = [
@@ -1256,11 +1259,82 @@ print_r($lista_coisas);
 echo '</pre>';
 
 echo in_array('Uva', $lista_coisas['frutas']);
-~~~
+```
 
 
 <hr>
 
 <div id="aula39" align="center">
-<h2>AAula 39: Extra - False, Null e Empty.</h2>
+<h2>Aula 39: Extra - False, Null e Empty.</h2>
+</div>
+
+São valores especiais, que possuem diferenças sutis entre si, sendo fatores potenciais de bugs!
+
+- false (true/false) - tipo de variável boolean;
+- null e empty - são valores especiais.
+
+> arquivo false_null_empty.php
+
+1. null:
+
+Para verificar se o valor é null, podemos utilizar a função nativa \*\*is_null(&lt;variável&gt;), como abaixo:
+
+```php
+$funcionario1 = null;
+$funcionario2 = '';
+
+// valores null
+if (is_null($funcionario1)) {
+  echo 'Sim, a variável é null.';
+} else {
+  echo 'Não, a variável não é null.';
+}
+
+echo '<br>';
+
+if (is_null($funcionario2)) {
+  echo 'Sim, a variável é null.';
+} else {
+  echo 'Não, a variável não é null.';
+}
+```
+
+Nos casos acima, temos o retorno de que $funcionario1 é null, e $funcionario2, não.
+
+1. empty (vazio):
+
+Para verificar se o valor é empty, podemos utilizar a função nativa \*\*empty(&lt;variável&gt;), como abaixo:
+
+```php
+$funcionario1 = null;
+$funcionario2 = '';
+
+// valores vazio?
+if (empty($funcionario1)) {
+  echo 'Sim, a variável está vazia.';
+} else {
+  echo 'Não, a variável não está vazia.';
+}
+
+echo '<br>';
+
+if (empty($funcionario2)) {
+  echo 'Sim, a variável está vazia.';
+} else {
+  echo 'Não, a variável não está vazia.';
+}
+```
+
+Nos casos acima, temos o retorno de ambas as variáveis estão vazias!!!
+
+Ou seja, no empty, o valor null também é considerado vazio. **_Portanto, null é exclusivamente null, enquanto empty pode ser vazio ou null!_**
+
+3. false:
+
+False não é considerado null, mas é considerado vazio.
+
+<hr>
+
+<div id="aula40" align="center">
+<h2>Aula 40: Funções nativas para manipular arrays.</h2>
 </div>
