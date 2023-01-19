@@ -1186,3 +1186,81 @@ Praticando:
 <div id="aula38" align="center">
 <h2>Aula 38: Array - Métodos de pesquisa.</h2>
 </div>
+
+1. Método in_array():
+
+Retorna **true ou false** para a existência do que está sendo procurado!
+
+~~~php
+in_array(<item que estamos procurando>, <array>);
+~~~
+
+**Importante:**
+- Se o retorno for true: texto impresso será 1;
+- Se o retorno for falso: texto impresso será 'vazio'.
+Podemos criar uma lógica que garante um retorno mais intuitivo, atribuindo o método in_array() a uma ariável, e associá-la a uma estrutura if/else, por exemplo, como abaixo:
+
+~~~php
+$lista_frutas = array('Banana', 'Maçã', 'Morango', 'Uva');
+
+$existe = in_array('Laranja', $lista_frutas);
+
+if ($existe) { //true
+  echo 'Sim, o valor pesquisado existe no array! :)';
+} else { // false
+  echo 'Não, o valor pesquisado não existe no array! :(';
+}
+~~~
+
+2. Método array_search():
+
+Retorna o **índice** do valor pesquisado, caso ele exista.
+
+~~~php
+array_search(<item que estamos procurando>, <array>);
+~~~
+
+**Importante:**
+- Se o item existir no array: retorna o índice;
+- Se não existir: retorna null (não é necessariamente o valor false!!!). A representação textual é vazio. 
+Podemos também utilizar if/else para apresentar um texto mais intuitivo ao usuário, como abaixo:
+
+~~~php
+$lista_frutas = array('Banana', 'Maçã', 'Morango', 'Uva');
+
+$existe = array_search('Laranja', $lista_frutas);
+
+if ($existe != null) {
+  echo 'Sim, o valor pesquisado existe no array! :)';
+} else {
+  echo 'Não, o valor pesquisado não existe no array! :(';
+}
+~~~
+
+3. Para arrays multidimensionais:
+
+Na essência, trata-se de um array normal para a pesquisa, pois o método atuará sobre um array específico!
+
+Exemplo:
+
+~~~php
+$lista_frutas = array('Banana', 'Maçã', 'Morango', 'Uva');
+
+$lista_coisas = [
+  'frutas' => $lista_frutas,
+  'pessoas' => ['João', 'Maria']
+];
+
+echo '<pre>';
+print_r($lista_coisas);
+echo '</pre>';
+
+echo in_array('Uva', $lista_coisas['frutas']);
+~~~
+
+
+<hr>
+
+<div id="aula39" align="center">
+<h2>AAula 39: Extra - False, Null e Empty.</h2>
+</div>
