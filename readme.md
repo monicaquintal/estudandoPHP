@@ -1150,3 +1150,39 @@ echo $lista_frutas_associativo['x'];
 <div id="aula37" align="center">
 <h2>Aula 37: Array multidimensional.</h2>
 </div>
+
+Sâo arrays de arrays! 
+
+Através de uma variável i ou índice, podemos acessar outro array (encadear no índice outros arrays, criando quantas dimensões forem necessárias para atender às necessidades)!
+
+> arquivo array_multidimensional.php
+
+Praticando:
+
+~~~php
+    // array $lista_coisas
+    $lista_coisas = array();
+
+    // arrays associativos frutas e pessoas
+    $lista_coisas['frutas'] = array('1' => 'Banana', '2' => 'Maçã', '3' => 'Morango', '4' =>  'Uva');
+
+    $lista_coisas['pessoas'] = array('1' => 'João', '2' => 'José', '3' => 'Maria');
+
+    // imprimindo o array $lista_coisas
+    echo '<pre>';
+    print_r($lista_coisas);
+    echo '</pre>';
+
+    echo '<hr>';
+    // para recuperar valores específicos
+    echo $lista_coisas['frutas'][3];
+    echo '<br>';
+    echo $lista_coisas['pessoas'][2];
+~~~
+
+
+<hr>
+
+<div id="aula38" align="center">
+<h2>Aula 38: Array - Métodos de pesquisa.</h2>
+</div>
