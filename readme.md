@@ -1277,7 +1277,7 @@ São valores especiais, que possuem diferenças sutis entre si, sendo fatores po
 
 1. null:
 
-Para verificar se o valor é null, podemos utilizar a função nativa \*\*is_null(&lt;variável&gt;), como abaixo:
+Para verificar se o valor é null, podemos utilizar a função nativa **is_null(&lt;variável&gt;)**, como abaixo:
 
 ```php
 $funcionario1 = null;
@@ -1303,7 +1303,7 @@ Nos casos acima, temos o retorno de que $funcionario1 é null, e $funcionario2, 
 
 1. empty (vazio):
 
-Para verificar se o valor é empty, podemos utilizar a função nativa \*\*empty(&lt;variável&gt;), como abaixo:
+Para verificar se o valor é empty, podemos utilizar a função nativa **empty(&lt;variável&gt;)**, como abaixo:
 
 ```php
 $funcionario1 = null;
@@ -1333,8 +1333,112 @@ Ou seja, no empty, o valor null também é considerado vazio. **_Portanto, null 
 
 False não é considerado null, mas é considerado vazio.
 
+
 <hr>
 
 <div id="aula40" align="center">
 <h2>Aula 40: Funções nativas para manipular arrays.</h2>
+</div>
+
+> arquivo funcoes_arrays.php
+
+Algumas das principais:
+
+- is_array(array): verifica se o parâmetro é um array - retorna true/false.
+
+~~~php
+$array = array();
+$retorno = is_array($array);
+
+if ($retorno) {
+  echo 'Sim, é um array!';
+} else {
+  echo 'Não, não é um array.';
+}  
+~~~
+
+- array_keys(array): retorna todas as chaves de um array.
+
+~~~php
+$array = [1 => 'a', 7 => 'b', 18 => 'c'];
+
+$chaves_array = array_keys($array);
+echo '<pre>';
+print_r ($chaves_array);
+echo '<pre>';
+~~~
+
+- sort(array): ordena um array e reajusta seus índices (sequência alfabética). Retorna true/false para a tentativa de ordenação!
+
+~~~php
+$array = array('notebook', 'teclado', 'mouse', 'cabo hdmi', 'gabinete', 'fonte');
+
+sort($array);
+echo '<pre>';
+print_r ($array);
+echo '<pre>';
+~~~
+
+- asort(array): ordena um array preservando os índices. Retorna true/false para a tentativa de ordenação! Coloca em ordem alfabética, mas reserva a relação índice-valor!
+
+~~~php
+$array = array('notebook', 'teclado', 'mouse', 'cabo hdmi', 'gabinete', 'fonte');
+
+//asort(array)
+asort($array);
+echo '<pre>';
+print_r ($array);
+echo '<pre>';
+~~~
+
+- count(array): conta a quantidade de elementos de um array.
+
+~~~php
+$array = array('notebook', 'teclado', 'mouse', 'cabo hdmi', 'gabinete', 'fonte');
+echo '<pre>';
+print_r ($array);
+echo count($array);
+echo '</pre>';
+~~~
+
+- array_merge(array): funde um ou mais arrays.
+
+~~~php
+$array1 = ['osx', 'windows'];
+$array2 = ['linux'];
+$array3 = ['solaris'];
+
+$novo_array = array_merge($array1, $array2, $array3);
+echo '<pre>';
+print_r ($novo_array);
+echo '<pre>';
+~~~
+
+- explode(array): divide uma string baseada em um delimitador. O retorno é dado em um array. Nesse caso '/' é o delimitador.
+
+~~~php
+$string = '29/12/1991';
+$array_retorno = explode('/', $string);
+
+echo '<pre>';
+print_r ($array_retorno);
+echo '<pre>';
+~~~
+
+- implode(array): junta elementos de um array em uma string.
+
+~~~php
+$array = ['a', 'b', 'x', 'y'];
+$string_retorno = implode(',', $array);
+
+echo '<pre>';
+print_r ($string_retorno);
+echo '<pre>';
+~~~
+
+
+<hr>
+
+<div id="aula41" align="center">
+<h2>Aula 41: Loops parte 1 - Introdução.</h2>
 </div>
