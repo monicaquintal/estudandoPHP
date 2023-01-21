@@ -54,7 +54,7 @@
 <a href="#aula44">Aula 44: Loops parte 4 - For</a><br>
 <a href="#aula45">Aula 45: Praticando um pouco - Percorrendo arrays</a><br>
 <a href="#aula46">Aula 46: Loops parte 5 - Foreach</a><br>
-<a href="#aula47">Aula 47: Praticando um pouco - Foreach em arrays</a><br>
+<a href="#aula47">Aula 47: Praticando um pouco - Foreach em arrays associativos</a><br>
 <a href="#aula48">Aula 48: Atividades para fixação de conteúdo</a><br>
 
 <hr>
@@ -1708,4 +1708,43 @@ for ($idx = 0; $idx < count($registros); $idx++) {
 
 <div id="aula46" align="center">
 <h2>Aula 46: Loops parte 5 - Foreach.</h2>
+</div>
+
+O comando de repetição Foreach é especializado para arrays e objetos; ou seja, **o controle de finalização das interações está intrínseca ao comando!!!** Automaticamente finalizará quando chegar ao final do array, não sendo necessário definir parâmetros (não é necessário estabelecer condições de parada e variáveis de controle)!
+
+> arquivo loops_foreach.php
+
+Sintaxe:
+
+~~~php
+foreach($array as $variavel) {
+  /* conteúdo a ser executado para cada um dos elementos percorridos dentro do array*/
+}
+~~~
+
+Exemplo:
+
+~~~php
+$itens = array('Sofá', 'Mesa', 'Cadeira', 'Fogão', 'Geladeira');
+
+echo '<pre>';
+print_r($itens);
+echo '</pre>';
+echo '<hr>';
+
+foreach($itens as $item) {
+  echo "$item";
+
+  if ($item == 'Mesa') {
+    echo '(*Compre uma mesa e ganhe 25% de desconto na compra de 4 cadeiras*)';
+  } 
+  echo '<br>';
+}
+~~~
+
+
+<hr>
+
+<div id="aula47" align="center">
+<h2>Aula 47: Praticando um pouco - Foreach em arrays associativos.</h2>
 </div>
