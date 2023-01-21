@@ -1442,3 +1442,24 @@ echo '<pre>';
 <div id="aula41" align="center">
 <h2>Aula 41: Loops parte 1 - Introdução.</h2>
 </div>
+
+Estruturas de repetição (também chamadas loops ou laços) são estruturas que permitem a repetição de um comando ou bloco de código até atender determinada condição!
+
+São utilizadas para recuperar informações contidas em arquivos, para exibir informações recuperadas em BDs, realizar cálculos, etc!
+
+Tornam os códigos menos verbosos, pois modificaremos apenas os valores dinâmicos.
+
+Laços, de modo geral, esperam um comando de parada, indicando que devem ser interrompidos, o que evita o looping infinito!
+
+São elas:
+- while;
+- do while;
+- for;
+- foreach.
+
+
+<hr>
+
+<div id="aula42" align="center">
+<h2>Aula 42: Loops parte 2 - While.</h2>
+</div>
