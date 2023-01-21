@@ -1801,3 +1801,43 @@ Caso adicionamos novas indormações (como data de nascimento dos funcionários)
 <div id="aula48" align="center">
 <h2>Aula 48: Atividades para fixação de conteúdo.</h2>
 </div>
+
+> arquivo atividade_fixacao_3.php
+
+Enunciado:
+
+Crie um script capaz de produzir, através de um laço de repetição, um array com 6 elementos numéricos aleatórios entre 1 e 60, simulando o sorteio da mega sena.
+Atente-se ao fato de que os números aleatórios contidos dentro do array não podem ser repetidos.
+
+Solução:
+
+~~~php
+$numeros = [];
+
+for ($i = 0; $i < 6; $i++) {
+  $num = rand(1, 60);
+
+  if (!in_array($num, $numeros)) {
+    $numeros[] = $num;
+  }
+}
+
+echo '<pre>';
+print_r($numeros);
+echo '</pre>';
+~~~
+
+Solução do professor, utilizando while:
+
+~~~php
+$numeros = array();
+
+while (count($numeros) <= 5) {
+  $num = rand(1, 60);
+
+  if (!in_array($num, $numeros)) {
+    $numeros[] = $num;
+  }
+}
+print_r($numeros);
+~~~
