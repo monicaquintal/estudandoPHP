@@ -54,7 +54,7 @@
 <a href="#aula44">Aula 44: Loops parte 4 - For</a><br>
 <a href="#aula45">Aula 45: Praticando um pouco - Percorrendo arrays</a><br>
 <a href="#aula46">Aula 46: Loops parte 5 - Foreach</a><br>
-<a href="#aula47">Aula 47: Praticando um pouco - Foreach em arrays associativos</a><br>
+<a href="#aula47">Aula 47: Praticando um pouco - Foreach em arrays associativos e Foreach encadeados</a><br>
 <a href="#aula48">Aula 48: Atividades para fixação de conteúdo</a><br>
 
 <hr>
@@ -1746,5 +1746,58 @@ foreach($itens as $item) {
 <hr>
 
 <div id="aula47" align="center">
-<h2>Aula 47: Praticando um pouco - Foreach em arrays associativos.</h2>
+<h2>Aula 47: Praticando um pouco - Foreach em arrays associativos e Foreach encadeados.</h2>
+</div>
+
+Há alguns contextos mais complexos em que o Foreach pode ser aplicado, que serão abordados nessa aula.
+
+> arquivo loops_pratica_2.php
+
+Podemos incluir entre o valor e o array, uma outra variável, que receberá o índice em cada uma das iterações. Dessa forma, o foreach saberá que o índice deve ser associado à variável. Devemos separar os valores por um token (=>). Exemplo:
+
+~~~php
+foreach ($array as $chave => $item) {
+  //bloco de códigos
+}
+~~~
+
+Exemplo:
+
+~~~php
+$funcionarios = array('João', 'Maria', 'Júlia');
+
+foreach ($funcionarios as $idx => $nome_funcionario) {
+  echo "ID $idx - Nome: $nome_funcionario <br>";
+}
+~~~
+
+Para atribuir mais informações, incluindo array associativa, podemos também utilizar a estrutura de foerach encadeada!
+
+Exemplo:
+
+~~~php
+$funcionarios = array(
+  array('nome' => 'João', 'salario' => 2500), 
+  array('nome' => 'Maria', 'salario' => 3000),  
+  array('nome' => 'Julia', 'salario' => 2200), 
+);
+
+foreach ($funcionarios as $idx => $funcionario) {
+  
+  foreach($funcionario as $idx2 => $valor) {
+
+    echo "$idx2 - $valor <br>";
+
+  }
+  echo '<hr>';
+}
+~~~
+
+Caso adicionamos novas indormações (como data de nascimento dos funcionários), a estrutura os interpretará e exibirá, a partir da estrutura acima!
+
+
+<hr>
+
+<div id="aula48" align="center">
+<h2>Aula 48: Atividades para fixação de conteúdo.</h2>
 </div>
