@@ -1464,6 +1464,8 @@ São elas:
 <h2>Aula 42: Loops parte 2 - While.</h2>
 </div>
 
+> arquivo loops_while.php
+
 Sintaxe:
 
 ~~~php
@@ -1520,4 +1522,35 @@ echo "Fim do loop";
 
 <div id="aula43" align="center">
 <h2>Aula 43: Loops parte 3 - Do while.</h2>
+</div>
+
+> arquivo loops_do_while.php
+
+Sintaxe:
+
+~~~php
+do {
+  //bloco de códigos
+} while(condição de parada);
+~~~
+
+Exemplo:
+
+~~~php
+$x = 10;
+
+do {
+  echo 'Entrou no do while';
+} while($x < 9);
+~~~
+
+A diferença em relação ao "while" é que, no caso do "do while", a condição é validada apenas ao término da execução do bloco (é executado pelo menos uma vez).
+
+Podemos também utilizar o "continue" e o "break". Atentar-se à questão do incremento do critério de parada.
+
+
+<hr>
+
+<div id="aula44" align="center">
+<h2>Aula 44: Loops parte 4 - For.</h2>
 </div>
