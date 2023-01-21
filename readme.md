@@ -1554,3 +1554,30 @@ Podemos também utilizar o "continue" e o "break". Atentar-se à questão do inc
 <div id="aula44" align="center">
 <h2>Aula 44: Loops parte 4 - For.</h2>
 </div>
+
+> arquivo loops_for.php
+
+Sintaxe:
+
+~~~php
+for (<variavel>; <condição>; <incremento>) {
+  // bloco de código
+}
+~~~
+
+Exemplo:
+
+~~~php
+for ($x = 1; $x <= 10; $x++) {
+  echo "$x <br>";
+}
+~~~
+
+Podemos omitir o segundo parâmetro (ou passar true), e estabelecer o critério de parada dentro do laço for, usando break, por exemplo.
+
+
+<hr>
+
+<div id="aula45" align="center">
+<h2>Aula 45: Praticando um pouco - Percorrendo arrays com While, Do whule e For.</h2>
+</div>
