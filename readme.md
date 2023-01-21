@@ -1463,3 +1463,61 @@ São elas:
 <div id="aula42" align="center">
 <h2>Aula 42: Loops parte 2 - While.</h2>
 </div>
+
+Sintaxe:
+
+~~~php
+while (condição) {
+  bloco de código
+  comando de parada
+}
+~~~
+
+Exemplo:
+
+~~~php
+while ($num < 10) {
+  echo "$num <br>";
+  $num++; // critério de parada
+}
+~~~
+
+Podemos também utilizar os comandos:
+- break: interrompe a execução do laço, independente do critério estabelecido.
+
+~~~php
+$num = 1;
+echo "Início do loop <br>";
+
+while ($num < 50) {
+  $num += 5; // critério de parada
+  echo "$num <br>";
+  break;
+}
+echo "Fim do loop";
+~~~
+
+- continue: não interrompe a repetição do laço, apenas pula para a próxima iteração do laço (descarta o que está a seguir até o fechamento do bloco)!
+
+~~~php
+$num = 1;
+echo "Início do loop <br>";
+
+while ($num < 10) {
+
+  $num += 1;
+  
+  if($num == 2 || $num == 6) {
+    continue;
+  }
+  echo "$num <br>";
+}
+echo "Fim do loop";
+~~~
+
+
+<hr>
+
+<div id="aula43" align="center">
+<h2>Aula 43: Loops parte 3 - Do while.</h2>
+</div>
