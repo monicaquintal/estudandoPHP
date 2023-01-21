@@ -1581,3 +1581,131 @@ Podemos omitir o segundo parâmetro (ou passar true), e estabelecer o critério 
 <div id="aula45" align="center">
 <h2>Aula 45: Praticando um pouco - Percorrendo arrays com While, Do whule e For.</h2>
 </div>
+
+> arquivo loops_pratica_1.php
+
+Percorrendo arrays - no exemplo, trata-se de um site de notícias.
+
+1. While:
+
+Imprimindo apenas títulos (sem conteúdos das notícias):
+
+~~~php
+$registros = array('Título notícia 1', 'Título notícia 2', 'Título notícia 3');
+
+$idx = 0;
+while($idx < 3) {
+  echo "$registros[$idx] <br>";
+  $idx++;
+}
+~~~
+
+Imprimindo títulos COM conteúdos, como arrays associativas (e recuperando cada um dos itens):
+
+~~~php
+$registros = array(
+  array('titulo' => 'Título notícia 1', 'conteudo' => 'Conteudo Noticia 1'),
+  array('titulo' => 'Título notícia 2', 'conteudo' => 'Conteudo Noticia 2'),
+  array('titulo' => 'Título notícia 3', 'conteudo' => 'Conteudo Noticia 3')
+  );
+
+echo '<pre>';
+print_r($registros);
+echo '</pre>';
+echo '<hr>';
+
+$idx = 0;
+
+while($idx < 3) {
+  print_r ($registros[$idx]);
+  echo "<br>";
+  $idx++;
+}
+~~~
+
+Acessando valores de título e conteúdo separadamente, a partir dos índices associativos, e atribuindo tags HTML para cada um deles.
+
+~~~php
+$registros = array(
+  array('titulo' => 'Título notícia 1', 'conteudo' => 'Conteudo Noticia 1'),
+  array('titulo' => 'Título notícia 2', 'conteudo' => 'Conteudo Noticia 2'),
+  array('titulo' => 'Título notícia 3', 'conteudo' => 'Conteudo Noticia 3')
+  );
+
+echo '<pre>';
+print_r($registros);
+echo '</pre>';
+echo '<hr>';
+
+$idx = 0;
+
+while($idx < 3) {
+  echo '<h3>' . $registros[$idx]['titulo'] . '</h3>';
+  echo '<p>' . $registros[$idx]['conteudo'] . '<p>';
+  echo "<hr>";
+  $idx++;
+}
+~~~
+
+Podemos, ainda, utilizar a **função nativa count()**, que conta a quantidade de elementos de um array.
+Portanto, ao invés de "engessar" o valor do índice, podemos utilizar a função count(array) para torná-lo dinâmico! 
+Ou seja, a cada notícia adicionada, não precisaremos alterar o índice.
+
+~~~php
+$registros = array(
+  array('titulo' => 'Título notícia 1', 'conteudo' => 'Conteudo Noticia 1'),
+  array('titulo' => 'Título notícia 2', 'conteudo' => 'Conteudo Noticia 2'),
+  array('titulo' => 'Título notícia 3', 'conteudo' => 'Conteudo Noticia 3'),
+  array('titulo' => 'Título notícia 4', 'conteudo' => 'Conteudo Noticia 4')
+  );
+
+echo '<pre>';
+print_r($registros);
+echo '</pre>';
+echo '<hr>';
+
+$idx = 0;
+
+// função count()
+echo 'O array possui ' . count($registros) . ' registros.';
+echo "<hr>";
+
+while($idx < count($registros)) {
+  echo '<h3>' . $registros[$idx]['titulo'] . '</h3>';
+  echo '<p>' . $registros[$idx]['conteudo'] . '</p>';
+  echo "<hr>";
+  $idx++;
+}
+~~~
+
+Podemos, também, implementar a mesma lógica com Do while:
+
+~~~php
+<...>
+
+do {
+  echo '<h2>' . $registros[$idx]['titulo'] . '</h2>';
+  echo '<p>' . $registros[$idx]['conteudo'] . '</p>';
+  echo "<hr>";
+  $idx++;
+} while ($idx < count($registros));
+~~~
+
+Podemos, ainda, implementar a mesma lógica com For:
+
+~~~php
+<...>
+
+for ($idx = 0; $idx < count($registros); $idx++) {
+  echo '<h3>' . $registros[$idx]['titulo'] . '</h3>';
+  echo '<p>' . $registros[$idx]['conteudo'] . '</p>';
+  echo "<hr>";
+}
+~~~
+
+
+<hr>
+
+<div id="aula46" align="center">
+<h2>Aula 46: Loops parte 5 - Foreach.</h2>
+</div>
