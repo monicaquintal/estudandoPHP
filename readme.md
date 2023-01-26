@@ -57,6 +57,11 @@
 <a href="#aula47">Aula 47: Praticando um pouco - Foreach em arrays associativos e Foreach encadeados</a><br>
 <a href="#aula48">Aula 48: Atividades para fixação de conteúdo</a><br>
 
+## Extra:
+
+[Aplicação desenvolvida ao término do módulo](https://github.com/monicaquintal/app-help-desk).
+[Continuação do estudo, com PHP e Orientação a Objetos](https://github.com/monicaquintal/estudandoPHP-orientacao-a-objetos).
+
 <hr>
 
 <div id="aula01" align="center">
@@ -1841,3 +1846,8 @@ while (count($numeros) <= 5) {
 }
 print_r($numeros);
 ~~~
+
+---
+
+[Aplicação desenvolvida ao término do módulo](https://github.com/monicaquintal/app-help-desk).
+[Continuação do estudo, com PHP e Orientação a Objetos](https://github.com/monicaquintal/estudandoPHP-orientacao-a-objetos).
