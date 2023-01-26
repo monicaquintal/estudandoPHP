@@ -60,6 +60,7 @@
 ## Extra:
 
 [Aplicação desenvolvida ao término do módulo](https://github.com/monicaquintal/app-help-desk).
+
 [Continuação do estudo, com PHP e Orientação a Objetos](https://github.com/monicaquintal/estudandoPHP-orientacao-a-objetos).
 
 <hr>
